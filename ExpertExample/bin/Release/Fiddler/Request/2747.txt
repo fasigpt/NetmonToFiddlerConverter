@@ -1,0 +1,12 @@
+GET /pki/mscorp/crl/MSIT%20Machine%20Auth%20CA%202(1).crl HTTP/1.1
+Cache-Control: max-age = 6439
+Accept: */*
+Accept-Encoding: peerdist
+If-Modified-Since: Thu, 03 Oct 2013 02:36:36 GMT
+If-None-Match: "52574561e1bfce1:0"
+User-Agent: Microsoft-CryptoAPI/6.2
+Connection: Keep-Alive
+X-P2P-PeerDist: Version=1.1
+X-P2P-PeerDistEx: MinContentInformation=1.0, MaxContentInformation=2.0
+Host: mscrl.microsoft.com
+

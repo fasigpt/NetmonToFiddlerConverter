@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Content-Length: 301
+Content-Type: application/xml; charset=utf-8
+Last-Modified: Sat, 05 Oct 2013 12:39:19 GMT
+Server: Microsoft-IIS/8.0
+X-TimeToExpire: 210.9
+X-Deployment: eecab1e730d3492dad3e793db4362788
+X-WNS-Tag: index0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Cache-Control: public, max-age=160
+Expires: Sat, 05 Oct 2013 12:49:57 GMT
+Date: Sat, 05 Oct 2013 12:47:17 GMT
+Connection: keep-alive
+
+<tile><visual lang="en-in" branding="logo"><binding template="TileWideText04"><text id="1">PTI - Tambe's experience and hard work paid off: Dravid</text></binding><binding template="TileSquareText04"><text id="1">PTI - Tambe's experience and hard work paid off: Dravid</text></binding></visual></tile>

@@ -1,0 +1,10 @@
+HTTP/1.1 302 Redirect
+Content-Type: text/html; charset=UTF-8
+Location: http://finance.services.appex.bing.com/Market.svc/AppTile?symbol=76.10.!TOMX&type=0&mkt=EN-US&mode=0
+Server: Microsoft-IIS/8.0
+X-Powered-By: ASP.NET
+Date: Sat, 05 Oct 2013 12:47:10 GMT
+Content-Length: 235
+
+<head><title>Document Moved</title></head>
+<body><h1>Object Moved</h1>This document may be found <a HREF="http://finance.services.appex.bing.com/Market.svc/AppTile?symbol=76.10.!TOMX&amp;type=0&amp;mkt=EN-US&amp;mode=0">here</a></body>

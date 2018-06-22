@@ -1,0 +1,6 @@
+HEAD /w8/2/redir/storeauth.cab?1310051247 HTTP/1.1
+Connection: Keep-Alive
+Accept: */*
+User-Agent: Windows-Update-Agent
+Host: fe1.ws.microsoft.com
+

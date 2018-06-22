@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Content-Type: application/xml; charset=utf-8
+Last-Modified: Sat, 05 Oct 2013 12:38:08 GMT
+ETag: e81c9327bbd0562f44584c30431e846e
+Server: Microsoft-IIS/8.0
+X-WNS-Tag: 0
+X-Diagnostic-S: 00100STB
+X-Diagnostic-T: 57fe3d5b-52d9-47ab-8b69-ae69103a06cd
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+X-Content-Type-Options: nosniff
+Content-Length: 870
+Cache-Control: public, max-age=61
+Date: Sat, 05 Oct 2013 12:47:20 GMT
+Connection: keep-alive
+
+<?xml version="1.0" encoding="utf-8"?><tile><visual version="2" lang="EN-US"><binding template="TileSquare150x150PeekImageAndText04" fallback="TileSquarePeekImageAndText04"><image id="1" src="http://appexblu.stb.s-msn.com/usappex/i/27/5538A99F71DF7CA7A45D115D907A9C.jpg" /><text id="1">After Triumph fire, Carnival tries to correct course</text></binding><binding template="TileWide310x150ImageAndText01" fallback="TileWideImageAndText01"><image id="1" src="http://appexblu.stb.s-msn.com/usappex/i/CC/429FB84554C32D3C5C370D0184ED2.jpg" /><text id="1">After Triumph fire, Carnival tries to correct course</text></binding><binding template="TileSquare310x310ImageAndText01"><image id="1" src="http://appexblu.stb.s-msn.com/usappex/i/2B/B6927A275E67DA29E771C7D91FB3FC.jpg" /><text id="1">After Triumph fire, Carnival tries to correct course</text></binding></visual></tile>

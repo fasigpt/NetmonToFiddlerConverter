@@ -1,0 +1,132 @@
+﻿IPv4 RESPONSE PAYLOAD
+
+
+<First_Payload_Chunk>
+
+Frame #481 8/8/2011 5:55:47 PM
+Print Frame Info? (y/n) y
+Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[1C-C1-DE-32-0D-72],SourceAddress:[00-07-B3-F5-A8-00]
+Ethernet.DestinationAddress: 1CC1DE 320D72 [1C-C1-DE-32-0D-72]
+Ethernet.DestinationAddress.Rsv: (000111..)
+Ethernet.DestinationAddress.UL:  (......0.) Universally Administered Address
+Ethernet.DestinationAddress.IG:  (.......0) Individual address (unicast)
+Ethernet.SourceAddress: Cisco Systems Inc. F5A800 [00-07-B3-F5-A8-00]
+Ethernet.SourceAddress.Rsv: (000000..)
+Ethernet.SourceAddress.UL:  (......0.) Universally Administered Address
+Ethernet.SourceAddress.IG:  (.......0) Individual address (unicast)
+Ethernet.EthernetType: Internet IP (IPv4), 2048(0x800)
+Ethernet.Ipv4: Src = 157.54.108.28, Dest = 10.171.71.31, Next Protocol = TCP, Packet ID = 5959, Total IP Length = 1500
+Ethernet.Ipv4.Versions: IPv4, Internet Protocol; Header Length = 20
+Ethernet.Ipv4.Versions.Version:      (0100....) IPv4, Internet Protocol
+Ethernet.Ipv4.Versions.HeaderLength: (....0101) 20 bytes (0x5)
+Ethernet.Ipv4.DifferentiatedServicesField: DSCP: 0, ECN: 0
+Ethernet.Ipv4.DifferentiatedServicesField.DSCP: (000000..) Differentiated services codepoint 0
+Ethernet.Ipv4.DifferentiatedServicesField.ECT:  (......0.) ECN-Capable Transport not set
+Ethernet.Ipv4.DifferentiatedServicesField.CE:   (.......0) ECN-CE not set
+Ethernet.Ipv4.TotalLength: 1500 (0x5DC)
+Ethernet.Ipv4.Identification: 5959 (0x1747)
+Ethernet.Ipv4.FragmentFlags: 16384 (0x4000)
+Ethernet.Ipv4.FragmentFlags.Reserved: (0...............)
+Ethernet.Ipv4.FragmentFlags.DF:       (.1..............) Do not fragment
+Ethernet.Ipv4.FragmentFlags.MF:       (..0.............) This is the last fragment
+Ethernet.Ipv4.FragmentFlags.Offset:   (...0000000000000) 0
+Ethernet.Ipv4.TimeToLive: 54 (0x36)
+Ethernet.Ipv4.NextProtocol: TCP, 6(0x6)
+Ethernet.Ipv4.Checksum: 52408 (0xCCB8)
+Ethernet.Ipv4.SourceAddress: 157.54.108.28
+Ethernet.Ipv4.DestinationAddress: 10.171.71.31
+Ethernet.Ipv4.Options: Empty
+Ethernet.Ipv4.Tcp: Flags=...A...., SrcPort=HTTP(80), DstPort=59529, PayloadLen=1460, Seq=264651303 - 264652763, Ack=3705129039, Win=65535
+Ethernet.Ipv4.Tcp.SrcPort: HTTP(80)
+Ethernet.Ipv4.Tcp.DstPort: 59529
+Ethernet.Ipv4.Tcp.SequenceNumber: 264651303 (0xFC64227)
+Ethernet.Ipv4.Tcp.AcknowledgementNumber: 3705129039 (0xDCD7C84F)
+Ethernet.Ipv4.Tcp.DataOffset: 80 (0x50)
+Ethernet.Ipv4.Tcp.DataOffset.DataOffset: (0101....) 20 bytes
+Ethernet.Ipv4.Tcp.DataOffset.Reserved:   (....000.)
+Ethernet.Ipv4.Tcp.DataOffset.NS:         (.......0) Nonce Sum not significant
+Ethernet.Ipv4.Tcp.Flags: ...A....
+Ethernet.Ipv4.Tcp.Flags.CWR:    (0.......) CWR not significant
+Ethernet.Ipv4.Tcp.Flags.ECE:    (.0......) ECN-Echo not significant
+Ethernet.Ipv4.Tcp.Flags.Urgent: (..0.....) Not Urgent Data
+Ethernet.Ipv4.Tcp.Flags.Ack:    (...1....) Acknowledgement field significant
+Ethernet.Ipv4.Tcp.Flags.Push:   (....0...) No Push Function
+Ethernet.Ipv4.Tcp.Flags.Reset:  (.....0..) No Reset
+Ethernet.Ipv4.Tcp.Flags.Syn:    (......0.) Not Synchronize sequence numbers
+Ethernet.Ipv4.Tcp.Flags.Fin:    (.......0) Not End of data
+Ethernet.Ipv4.Tcp.Window: 65535
+Ethernet.Ipv4.Tcp.Checksum: 0x472B, Good
+Ethernet.Ipv4.Tcp.UrgentPointer: 0 (0x0)
+Ethernet.Ipv4.Tcp.TCPPayload: SourcePort = 80, DestinationPort = 59529
+Ethernet.Ipv4.Tcp.TCPPayload.Http: HTTP Payload, URL: http://www.microsoft.com/en-us/default.aspx
+Ethernet.Ipv4.Tcp.TCPPayload.Http._BuildHTTPConversation: Empty
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload: HttpContentType =  text/html; charset=utf-8
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.HtmlPayload: (AsciiString) String is too long to display
+
+
+</First_Payload_Chunk>
+
+
+<Last_Payload_Chunk>
+
+Frame #491 8/8/2011 5:55:47 PM
+Print Frame Info? (y/n) y
+Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[1C-C1-DE-32-0D-72],SourceAddress:[00-07-B3-F5-A8-00]
+Ethernet.DestinationAddress: 1CC1DE 320D72 [1C-C1-DE-32-0D-72]
+Ethernet.DestinationAddress.Rsv: (000111..)
+Ethernet.DestinationAddress.UL:  (......0.) Universally Administered Address
+Ethernet.DestinationAddress.IG:  (.......0) Individual address (unicast)
+Ethernet.SourceAddress: Cisco Systems Inc. F5A800 [00-07-B3-F5-A8-00]
+Ethernet.SourceAddress.Rsv: (000000..)
+Ethernet.SourceAddress.UL:  (......0.) Universally Administered Address
+Ethernet.SourceAddress.IG:  (.......0) Individual address (unicast)
+Ethernet.EthernetType: Internet IP (IPv4), 2048(0x800)
+Ethernet.Ipv4: Src = 157.54.108.28, Dest = 10.171.71.31, Next Protocol = TCP, Packet ID = 5968, Total IP Length = 1500
+Ethernet.Ipv4.Versions: IPv4, Internet Protocol; Header Length = 20
+Ethernet.Ipv4.Versions.Version:      (0100....) IPv4, Internet Protocol
+Ethernet.Ipv4.Versions.HeaderLength: (....0101) 20 bytes (0x5)
+Ethernet.Ipv4.DifferentiatedServicesField: DSCP: 0, ECN: 0
+Ethernet.Ipv4.DifferentiatedServicesField.DSCP: (000000..) Differentiated services codepoint 0
+Ethernet.Ipv4.DifferentiatedServicesField.ECT:  (......0.) ECN-Capable Transport not set
+Ethernet.Ipv4.DifferentiatedServicesField.CE:   (.......0) ECN-CE not set
+Ethernet.Ipv4.TotalLength: 1500 (0x5DC)
+Ethernet.Ipv4.Identification: 5968 (0x1750)
+Ethernet.Ipv4.FragmentFlags: 16384 (0x4000)
+Ethernet.Ipv4.FragmentFlags.Reserved: (0...............)
+Ethernet.Ipv4.FragmentFlags.DF:       (.1..............) Do not fragment
+Ethernet.Ipv4.FragmentFlags.MF:       (..0.............) This is the last fragment
+Ethernet.Ipv4.FragmentFlags.Offset:   (...0000000000000) 0
+Ethernet.Ipv4.TimeToLive: 54 (0x36)
+Ethernet.Ipv4.NextProtocol: TCP, 6(0x6)
+Ethernet.Ipv4.Checksum: 52399 (0xCCAF)
+Ethernet.Ipv4.SourceAddress: 157.54.108.28
+Ethernet.Ipv4.DestinationAddress: 10.171.71.31
+Ethernet.Ipv4.Options: Empty
+Ethernet.Ipv4.Tcp: Flags=...A...., SrcPort=HTTP(80), DstPort=59529, PayloadLen=1460, Seq=264659495 - 264660955, Ack=3705129039, Win=65535
+Ethernet.Ipv4.Tcp.SrcPort: HTTP(80)
+Ethernet.Ipv4.Tcp.DstPort: 59529
+Ethernet.Ipv4.Tcp.SequenceNumber: 264659495 (0xFC66227)
+Ethernet.Ipv4.Tcp.AcknowledgementNumber: 3705129039 (0xDCD7C84F)
+Ethernet.Ipv4.Tcp.DataOffset: 80 (0x50)
+Ethernet.Ipv4.Tcp.DataOffset.DataOffset: (0101....) 20 bytes
+Ethernet.Ipv4.Tcp.DataOffset.Reserved:   (....000.)
+Ethernet.Ipv4.Tcp.DataOffset.NS:         (.......0) Nonce Sum not significant
+Ethernet.Ipv4.Tcp.Flags: ...A....
+Ethernet.Ipv4.Tcp.Flags.CWR:    (0.......) CWR not significant
+Ethernet.Ipv4.Tcp.Flags.ECE:    (.0......) ECN-Echo not significant
+Ethernet.Ipv4.Tcp.Flags.Urgent: (..0.....) Not Urgent Data
+Ethernet.Ipv4.Tcp.Flags.Ack:    (...1....) Acknowledgement field significant
+Ethernet.Ipv4.Tcp.Flags.Push:   (....0...) No Push Function
+Ethernet.Ipv4.Tcp.Flags.Reset:  (.....0..) No Reset
+Ethernet.Ipv4.Tcp.Flags.Syn:    (......0.) Not Synchronize sequence numbers
+Ethernet.Ipv4.Tcp.Flags.Fin:    (.......0) Not End of data
+Ethernet.Ipv4.Tcp.Window: 65535
+Ethernet.Ipv4.Tcp.Checksum: 0x497A, Good
+Ethernet.Ipv4.Tcp.UrgentPointer: 0 (0x0)
+Ethernet.Ipv4.Tcp.TCPPayload: SourcePort = 80, DestinationPort = 59529
+Ethernet.Ipv4.Tcp.TCPPayload.Http: HTTP Payload, URL: http://www.microsoft.com/en-us/default.aspx
+Ethernet.Ipv4.Tcp.TCPPayload.Http._BuildHTTPConversation: Empty
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload: HttpContentType =  text/html; charset=utf-8
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.HtmlPayload: (AsciiString) String is too long to display
+
+</Last_Payload_Chunk>

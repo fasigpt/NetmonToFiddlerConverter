@@ -1,0 +1,7 @@
+HTTP/1.1 304 Not Modified
+Content-Type: application/pkix-crl
+Age: 315
+Date: Sat, 05 Oct 2013 12:47:42 GMT
+Expires: Sat, 05 Oct 2013 13:25:22 GMT
+Connection: keep-alive
+

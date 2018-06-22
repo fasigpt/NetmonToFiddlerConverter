@@ -1,0 +1,9 @@
+GET http://fiddler2.com/UpdateCheck.aspx?isBeta=True HTTP/1.1
+User-Agent: Fiddler/2.4.5.0 beta (.NET 2.0.50727.6407; WinNT 6.2.9200.0; en-US; 4xAMD64)
+Pragma: no-cache
+Accept-Language: en-US
+Referer: http://fiddler2.com/client/2.4.5.0
+Host: fiddler2.com
+Accept-Encoding: gzip, deflate
+Proxy-Connection: Close
+

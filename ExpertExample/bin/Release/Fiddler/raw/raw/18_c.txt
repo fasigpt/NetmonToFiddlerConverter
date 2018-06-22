@@ -1,0 +1,9 @@
+GET /Market.svc/AppTile?symbol=76.10.!TOMX&type=0&mkt=EN-US&mode=0 HTTP/1.1
+User-Agent: Microsoft-WNS/6.2
+Host: finance.services.appex.bing.com
+Pragma: no-cache
+X-P2P-PeerDist: Version=1.1
+X-P2P-PeerDistEx: MinContentInformation=1.0, MaxContentInformation=2.0
+Accept-Encoding: peerdist
+Connection: Keep-Alive
+

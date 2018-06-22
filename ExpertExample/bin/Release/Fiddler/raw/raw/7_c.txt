@@ -1,0 +1,9 @@
+GET /ppcrlcheck.srf HTTP/1.0
+Accept: */*
+Accept-Encoding: peerdist
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 6.2; Win64; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Tablet PC 2.0; InfoPath.3; IDCRL 8.0.1132.0; IDCRL-cfg 14.500.21741.0; App svchost.exe, 6.2.9200.16420, {DF60E2DF-88AD-4526-AE21-83D130EF0F68})
+Connection: Keep-Alive
+X-P2P-PeerDist: Version=1.1
+X-P2P-PeerDistEx: MinContentInformation=1.0, MaxContentInformation=2.0
+Host: login.live.com
+

@@ -1,0 +1,13 @@
+TargetFile=D:\MyData\Projects\NetmonExpertSDK\ExpertExample\ExpertExample.msi
+ExpertName=NMExampleExpert
+Manufacturer=Microsoft
+ExpertVersion=1.0.0.0
+TargetNetmonVersion=any
+PlatformID=amd64
+BinaryPath=D:\MyData\Projects\NetmonExpertSDK\ExpertExample\bin\Release\
+ExpertCommand=ExpertExample.exe
+ExpertCommandLineArgs="{NetmonOpenCaptureFile}" /d "http and tcp"
+ExpertHelpFile=My Expert Help File.rtf
+WixToolPath=C:\Program Files\WiX\
+UPGRADECODE=67ecbec9-a13a-41c1-ac19-7dc677029b40
+GuidGenerator=D:\MyData\Projects\NetmonExpertSDK\ExpertMSI\QGUID.exe

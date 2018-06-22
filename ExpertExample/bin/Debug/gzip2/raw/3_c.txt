@@ -1,0 +1,7 @@
+CONNECT ms.tific.com:443 HTTP/1.0
+User-Agent: TiFiC Client
+Host: ms.tific.com:443
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+Pragma: no-cache
+

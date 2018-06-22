@@ -1,0 +1,424 @@
+<HTML><HEAD><meta http-equiv='X-UA-Compatible' content='IE=EmulateIE7'/> 
+<TITLE>Netmon HTTPAnalyzer REPORT</TITLE>
+<script src='http://code.jquery.com/jquery-latest.js'></script>
+<script>$(document).ready(function(){$('#sortedtable').tablesorter({sortList:[[0,0],[1,0]], widgets: ['zebra']});});</script>
+<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'/>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js'></script>
+<STYLE>TABLE{font-family: Verdana;font-size:10px;border-collapse:collapse;}BODY{font-family: Verdana;font-size:10px;}A:HOVER {font-weight:bold;text-decoration:underline}A.SSL {color:red}TD {overflow:hidden;}
+TH.headerSortUp { background-image: url(../img/small_asc.gif); background-color: #3399FF; } TH.headerSortDown { background-image: url(../img/small_desc.gif); background-color: #3399FF; } TH.header { background-image: url(../img/small.gif);cursor: pointer; font-weight: bold; background-repeat: no-repeat; background-position: center left; padding-left: 20px; border-right: 1px solid black; margin-left: -1px;}
+</STYLE></HEAD>
+<BODY>
+<script  src='http://dev.jquery.com/view/trunk/plugins/tablesorter/2.0/jquery.tablesorter.js'></script>
+HTTP parsed output for the file "D:\MyData\Projects\NetmonExpertSDK\TRACE\amehrot_Client_20111024.cap"<BR/>
+HTTP parsed output written to the file "D:\MyData\Projects\NetmonExpertSDK\ExpertExample\out.htm"<BR/>
+<li/>Total Number of HTTP Requests found : 8
+<li/>Total Number of HTTP Responses found : 7
+<li/>Total Number of HTTP Payload packets found : 22<BR/><BR/>
+Hover your mouse over the title to see more information about each field<BR><BR/>
+<TABLE BORDER='1' id='sortedtable' class='tablesorter' WIDTH='100%' STYLE='table-layout:fixed' ><THEAD><TR>
+<TH align=center><a title='HTTP Request Frame # in the netmon trace'>Request Frame #</a></TH>
+<TH align=center><a title='Time in the netmon trace when the HTTP request was made'>Time</a></TH>
+<TH align=center><a title='IP and port FROM which the HTTP request was made'>Source IP<BR>(Port)</a></TH>
+<TH align=center>Method</TH>
+<TH align=center><a title='Size of Request headers + ContentLength header (if present) '>Request length</a></TH>
+<TH align=center>Requested URL</TH>
+<TH align=center><a title='IP and port TO which the HTTP request was made'>Destination IP<BR>(Port)</a></TH>
+<TH align=center><a title='HTTP Request Frame # in the netmon trace'>Response Frame #</a></TH>
+<TH align=center>Status</TH>
+<TH align=center><a title='Value of the ContentLength header'>Response length</a></TH>
+<TH align=center><a title='Time between the HTTP Request frame and Last Response Payload frame'>Time-Taken</a></TH>
+<TH align=center>Content-Type</TH>
+<TH align=center><a title='Copy netmon filter for this conversation'>Filter</a></TH>
+</TR></THEAD><tbody>
+<TR>
+<TD align=center>79</TD>
+<TD align=center>10/24/2011 12:36:26 PM</TD>
+<TD align=center>192.168.1.29 (49792)</TD>
+<TD align=center><a id='a_0' href='#'>GET</a></TD>
+<TD align=center>268</TD>
+<TD align=left width='30%'>http://qa.landroverexcellence.com/ </TD>
+<TD align=center>85.232.41.95 (80)</TD>
+<TD align=center>82</TD>
+<TD align=center><a href='#' id='a_1' >302, Moved temporarily</a></TD>
+<TD align=center> 130</TD>
+<TD align=center>00:00:00.2624317</TD>
+<TD align=center> text/html; charset=utf-8</TD>
+<TD>
+<input type='button' value='CopyMe' onclick ="var str = 'ipv4.Address==192.168.1.29 and ipv4.Address==85.232.41.95 and tcp.port == 49792 and tcp.port == 80';if (window.clipboardData){if(clipboardData.setData)clipboardData.setData('text', str);}else{window.prompt('Copy to clipboard: Ctrl+C, Enter', str);}" />
+</TD>
+</TR>
+<DIV ID='div_0' style='DISPLAY: none'>
+<HR>
+GET / <BR>
+accept: text/html, application/xhtml+xml, */*<BR>
+accept-language: en-GB<BR>
+useragent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<BR>
+accept-encoding: gzip, deflate<BR>
+host:qa.landroverexcellence.com<BR>
+connection: Keep-Alive<BR>
+cookie:temp:1
+<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_0").dialog({autoOpen:false,title:'Request Header',width:'80%'});$("#a_0").click(function(){$("#div_0").dialog('open');return false;});})</script>
+<script>$</script>
+<DIV ID='div_1' style='DISPLAY: none'>
+<HR>
+date: Mon, 24 Oct 2011 11:36:23 GMT<BR>
+server: Microsoft-IIS/6.0<BR>
+x-ua-compatible: IE=EmulateIE7<BR>
+xpoweredby: ASP.NET<BR>
+xaspnetversion: 2.0.50727<BR>
+location: /login.aspx<BR>
+set-cookie: ASP.NET_SessionId=p0yoapi3bft5ita0ublzlj3s; path=/; HttpOnly<BR>
+cache-control: private<BR>
+contenttype: text/html; charset=utf-8<BR>
+contentlength: 130<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_1").dialog({autoOpen:false,title:'Response Header',width:'80%'});$("#a_1").click(function(){$("#div_1").dialog('open');return false;});})</script>
+<TR>
+<TD align=center>88</TD>
+<TD align=center>10/24/2011 12:36:26 PM</TD>
+<TD align=center>192.168.1.29 (49791)</TD>
+<TD align=center><a id='a_2' href='#'>GET</a></TD>
+<TD align=center>308</TD>
+<TD align=left width='30%'>http://qa.landroverexcellence.com/login.aspx </TD>
+<TD align=center>85.232.41.95 (80)</TD>
+<TD align=center>91</TD>
+<TD align=center><a href='#' id='a_3' >200, Ok</a></TD>
+<TD align=center> 17508</TD>
+<TD align=center>00:00:00.1100431</TD>
+<TD align=center> text/html; charset=utf-8</TD>
+<TD>
+<input type='button' value='CopyMe' onclick ="var str = 'ipv4.Address==192.168.1.29 and ipv4.Address==85.232.41.95 and tcp.port == 49791 and tcp.port == 80';if (window.clipboardData){if(clipboardData.setData)clipboardData.setData('text', str);}else{window.prompt('Copy to clipboard: Ctrl+C, Enter', str);}" />
+</TD>
+</TR>
+<DIV ID='div_2' style='DISPLAY: none'>
+<HR>
+GET /login.aspx <BR>
+accept: text/html, application/xhtml+xml, */*<BR>
+accept-language: en-GB<BR>
+useragent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<BR>
+accept-encoding: gzip, deflate<BR>
+host:qa.landroverexcellence.com<BR>
+connection: Keep-Alive<BR>
+cookie:temp:1;temp:p0yoapi3bft5ita0ublzlj3s
+<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_2").dialog({autoOpen:false,title:'Request Header',width:'80%'});$("#a_2").click(function(){$("#div_2").dialog('open');return false;});})</script>
+<script>$</script>
+<DIV ID='div_3' style='DISPLAY: none'>
+<HR>
+cache-control: private<BR>
+date: Mon, 24 Oct 2011 11:36:24 GMT<BR>
+contenttype: text/html; charset=utf-8<BR>
+server: Microsoft-IIS/6.0<BR>
+x-ua-compatible: IE=EmulateIE7<BR>
+xpoweredby: ASP.NET<BR>
+xaspnetversion: 2.0.50727<BR>
+set-cookie: .EXCROLES=; expires=Mon, 11-Oct-1999 23:00:00 GMT; path=/; HttpOnly<BR>
+vary: Accept-Encoding<BR>
+contentlength: 17508<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_3").dialog({autoOpen:false,title:'Response Header',width:'80%'});$("#a_3").click(function(){$("#div_3").dialog('open');return false;});})</script>
+<TR>
+<TD align=center>320</TD>
+<TD align=center>10/24/2011 12:36:38 PM</TD>
+<TD align=center>192.168.1.29 (49792)</TD>
+<TD align=center><a id='a_4' href='#'>POST</a></TD>
+<TD align=center>457682</TD>
+<TD align=left width='30%'>http://qa.landroverexcellence.com/login.aspx </TD>
+<TD align=center>85.232.41.95 (80)</TD>
+<TD align=center>327</TD>
+<TD align=center><a href='#' id='a_5' >302, Moved temporarily</a></TD>
+<TD align=center> 146</TD>
+<TD align=center>00:00:00.5258221</TD>
+<TD align=center> text/html; charset=utf-8</TD>
+<TD>
+<input type='button' value='CopyMe' onclick ="var str = 'ipv4.Address==192.168.1.29 and ipv4.Address==85.232.41.95 and tcp.port == 49792 and tcp.port == 80';if (window.clipboardData){if(clipboardData.setData)clipboardData.setData('text', str);}else{window.prompt('Copy to clipboard: Ctrl+C, Enter', str);}" />
+</TD>
+</TR>
+<DIV ID='div_4' style='DISPLAY: none'>
+<HR>
+POST /login.aspx <BR>
+accept: text/html, application/xhtml+xml, */*<BR>
+referer: http://qa.landroverexcellence.com/login.aspx<BR>
+accept-language: en-GB<BR>
+useragent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<BR>
+contenttype: application/x-www-form-urlencoded<BR>
+accept-encoding: gzip, deflate<BR>
+host:qa.landroverexcellence.com<BR>
+contentlength: 682<BR>
+connection: Keep-Alive<BR>
+cache-control: no-cache<BR>
+cookie:temp:1;temp:p0yoapi3bft5ita0ublzlj3s
+<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_4").dialog({autoOpen:false,title:'Request Header',width:'80%'});$("#a_4").click(function(){$("#div_4").dialog('open');return false;});})</script>
+<script>$</script>
+<DIV ID='div_5' style='DISPLAY: none'>
+<HR>
+date: Mon, 24 Oct 2011 11:36:36 GMT<BR>
+server: Microsoft-IIS/6.0<BR>
+x-ua-compatible: IE=EmulateIE7<BR>
+xpoweredby: ASP.NET<BR>
+xaspnetversion: 2.0.50727<BR>
+location: /admin/data_management/<BR>
+set-cookie: .EXCAUTH=5CF82F6C071D1850446DCD5178DB26EBC145E3FA5E556672BB676849AB2F5E62EDD7CEEB0A81013D6C828F2F3BCA99FD7776EBF28969A62846A30B8564F6EEF3A3E6A87AC6BA84459E010853D841EC82B3F0A85F3FA56E68FC22603E76B6B0A495359EE12481B982B98C09645108F64BE8AD3B94D9AB1C0CFB360782741D99988C93AF66F00A482DE8B79E84F47F9A65DDE55D57F4267600928EE825DE307AECA7211BB6; path=/; HttpOnly<BR>
+set-cookie: .EXCROLES=; expires=Mon, 11-Oct-1999 23:00:00 GMT; path=/; HttpOnly<BR>
+cache-control: private<BR>
+contenttype: text/html; charset=utf-8<BR>
+contentlength: 146<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_5").dialog({autoOpen:false,title:'Response Header',width:'80%'});$("#a_5").click(function(){$("#div_5").dialog('open');return false;});})</script>
+<TR>
+<TD align=center>336</TD>
+<TD align=center>10/24/2011 12:36:39 PM</TD>
+<TD align=center>192.168.1.29 (49791)</TD>
+<TD align=center><a id='a_6' href='#'>GET</a></TD>
+<TD align=center>734</TD>
+<TD align=left width='30%'>http://qa.landroverexcellence.com/admin/data_management/ </TD>
+<TD align=center>85.232.41.95 (80)</TD>
+<TD align=center>351</TD>
+<TD align=center><a href='#' id='a_7' >200, Ok</a></TD>
+<TD align=center> 114211</TD>
+<TD align=center>00:00:00.6891003</TD>
+<TD align=center> text/html; charset=utf-8</TD>
+<TD>
+<input type='button' value='CopyMe' onclick ="var str = 'ipv4.Address==192.168.1.29 and ipv4.Address==85.232.41.95 and tcp.port == 49791 and tcp.port == 80';if (window.clipboardData){if(clipboardData.setData)clipboardData.setData('text', str);}else{window.prompt('Copy to clipboard: Ctrl+C, Enter', str);}" />
+</TD>
+</TR>
+<DIV ID='div_6' style='DISPLAY: none'>
+<HR>
+GET /admin/data_management/ <BR>
+accept: text/html, application/xhtml+xml, */*<BR>
+referer: http://qa.landroverexcellence.com/login.aspx<BR>
+accept-language: en-GB<BR>
+useragent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<BR>
+accept-encoding: gzip, deflate<BR>
+host:qa.landroverexcellence.com<BR>
+connection: Keep-Alive<BR>
+cache-control: no-cache<BR>
+cookie:temp:1;temp:p0yoapi3bft5ita0ublzlj3s;temp:5CF82F6C071D1850446DCD5178DB26EBC145E3FA5E556672BB676849AB2F5E62EDD7CEEB0A81013D6C828F2F3BCA99FD7776EBF28969A62846A30B8564F6EEF3A3E6A87AC6BA84459E010853D841EC82B3F0A85F3FA56E68FC22603E76B6B0A495359EE12481B982B98C09645108F64BE8AD3B94D9AB1C0CFB360782741D99988C93AF66F00A482DE8B79E84F47F9A65DDE55D57F4267600928EE825DE307AECA7211BB6
+<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_6").dialog({autoOpen:false,title:'Request Header',width:'80%'});$("#a_6").click(function(){$("#div_6").dialog('open');return false;});})</script>
+<script>$</script>
+<DIV ID='div_7' style='DISPLAY: none'>
+<HR>
+cache-control: private<BR>
+date: Mon, 24 Oct 2011 11:36:36 GMT<BR>
+contenttype: text/html; charset=utf-8<BR>
+server: Microsoft-IIS/6.0<BR>
+x-ua-compatible: IE=EmulateIE7<BR>
+xpoweredby: ASP.NET<BR>
+xaspnetversion: 2.0.50727<BR>
+set-cookie: .EXCROLES=; expires=Mon, 11-Oct-1999 23:00:00 GMT; path=/; HttpOnly<BR>
+vary: Accept-Encoding<BR>
+contentlength: 114211<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_7").dialog({autoOpen:false,title:'Response Header',width:'80%'});$("#a_7").click(function(){$("#div_7").dialog('open');return false;});})</script>
+<TR>
+<TD align=center>463</TD>
+<TD align=center>10/24/2011 12:36:40 PM</TD>
+<TD align=center>192.168.1.29 (49792)</TD>
+<TD align=center><a id='a_8' href='#'>GET</a></TD>
+<TD align=center>789</TD>
+<TD align=left width='30%'>http://qa.landroverexcellence.com/admin/data_management/AjaxWebService.asmx/js </TD>
+<TD align=center>85.232.41.95 (80)</TD>
+<TD align=center>465</TD>
+<TD align=center><a href='#' id='a_9' >304, Not modified</a></TD>
+<TD align=center> Resp_Length </TD>
+<TD align=center>00:00:00.0216509</TD>
+<TD align=center> ContentType </TD>
+<TD>
+<input type='button' value='CopyMe' onclick ="var str = 'ipv4.Address==192.168.1.29 and ipv4.Address==85.232.41.95 and tcp.port == 49792 and tcp.port == 80';if (window.clipboardData){if(clipboardData.setData)clipboardData.setData('text', str);}else{window.prompt('Copy to clipboard: Ctrl+C, Enter', str);}" />
+</TD>
+</TR>
+<DIV ID='div_8' style='DISPLAY: none'>
+<HR>
+GET /admin/data_management/AjaxWebService.asmx/js <BR>
+accept: application/javascript, */*;q=0.8<BR>
+referer: http://qa.landroverexcellence.com/admin/data_management/<BR>
+accept-language: en-GB<BR>
+useragent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<BR>
+accept-encoding: gzip, deflate<BR>
+host:qa.landroverexcellence.com<BR>
+if-modified-since: Tue, 11 Oct 2011 08:36:42 GMT<BR>
+connection: Keep-Alive<BR>
+cookie:temp:1;temp:p0yoapi3bft5ita0ublzlj3s;temp:5CF82F6C071D1850446DCD5178DB26EBC145E3FA5E556672BB676849AB2F5E62EDD7CEEB0A81013D6C828F2F3BCA99FD7776EBF28969A62846A30B8564F6EEF3A3E6A87AC6BA84459E010853D841EC82B3F0A85F3FA56E68FC22603E76B6B0A495359EE12481B982B98C09645108F64BE8AD3B94D9AB1C0CFB360782741D99988C93AF66F00A482DE8B79E84F47F9A65DDE55D57F4267600928EE825DE307AECA7211BB6
+<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_8").dialog({autoOpen:false,title:'Request Header',width:'80%'});$("#a_8").click(function(){$("#div_8").dialog('open');return false;});})</script>
+<script>$</script>
+<DIV ID='div_9' style='DISPLAY: none'>
+<HR>
+connection: close<BR>
+date: Mon, 24 Oct 2011 11:36:37 GMT<BR>
+server: Microsoft-IIS/6.0<BR>
+x-ua-compatible: IE=EmulateIE7<BR>
+xpoweredby: ASP.NET<BR>
+xaspnetversion: 2.0.50727<BR>
+set-cookie: .EXCROLES=; expires=Mon, 11-Oct-1999 23:00:00 GMT; path=/; HttpOnly<BR>
+cache-control: private<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_9").dialog({autoOpen:false,title:'Response Header',width:'80%'});$("#a_9").click(function(){$("#div_9").dialog('open');return false;});})</script>
+<TR>
+<TD align=center>593</TD>
+<TD align=center>10/24/2011 12:36:46 PM</TD>
+<TD align=center>192.168.1.29 (49791)</TD>
+<TD align=center><a id='a_10' href='#'>GET</a></TD>
+<TD align=center>827</TD>
+<TD align=left width='30%'>http://qa.landroverexcellence.com/admin/data_management/Reports/CorporateReports/TrainingHistoryReport.aspx </TD>
+<TD align=center>85.232.41.95 (80)</TD>
+<TD align=center>614</TD>
+<TD align=center><a href='#' id='a_11' >200, Ok</a></TD>
+<TD align=center> 209107</TD>
+<TD align=center>00:00:01.1822604</TD>
+<TD align=center> text/html; charset=utf-8</TD>
+<TD>
+<input type='button' value='CopyMe' onclick ="var str = 'ipv4.Address==192.168.1.29 and ipv4.Address==85.232.41.95 and tcp.port == 49791 and tcp.port == 80';if (window.clipboardData){if(clipboardData.setData)clipboardData.setData('text', str);}else{window.prompt('Copy to clipboard: Ctrl+C, Enter', str);}" />
+</TD>
+</TR>
+<DIV ID='div_10' style='DISPLAY: none'>
+<HR>
+GET /admin/data_management/Reports/CorporateReports/TrainingHistoryReport.aspx <BR>
+accept: text/html, application/xhtml+xml, */*<BR>
+referer: http://qa.landroverexcellence.com/admin/data_management/<BR>
+accept-language: en-GB<BR>
+useragent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<BR>
+accept-encoding: gzip, deflate<BR>
+host:qa.landroverexcellence.com<BR>
+connection: Keep-Alive<BR>
+cookie:temp:1;temp:p0yoapi3bft5ita0ublzlj3s;temp:5CF82F6C071D1850446DCD5178DB26EBC145E3FA5E556672BB676849AB2F5E62EDD7CEEB0A81013D6C828F2F3BCA99FD7776EBF28969A62846A30B8564F6EEF3A3E6A87AC6BA84459E010853D841EC82B3F0A85F3FA56E68FC22603E76B6B0A495359EE12481B982B98C09645108F64BE8AD3B94D9AB1C0CFB360782741D99988C93AF66F00A482DE8B79E84F47F9A65DDE55D57F4267600928EE825DE307AECA7211BB6;temp:{'SelectedItems':['11:2'],'ExpandedItems':['11']}
+<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_10").dialog({autoOpen:false,title:'Request Header',width:'80%'});$("#a_10").click(function(){$("#div_10").dialog('open');return false;});})</script>
+<script>$</script>
+<DIV ID='div_11' style='DISPLAY: none'>
+<HR>
+cache-control: private<BR>
+date: Mon, 24 Oct 2011 11:36:45 GMT<BR>
+contenttype: text/html; charset=utf-8<BR>
+server: Microsoft-IIS/6.0<BR>
+x-ua-compatible: IE=EmulateIE7<BR>
+xpoweredby: ASP.NET<BR>
+xaspnetversion: 2.0.50727<BR>
+set-cookie: .EXCROLES=; expires=Mon, 11-Oct-1999 23:00:00 GMT; path=/; HttpOnly<BR>
+vary: Accept-Encoding<BR>
+contentlength: 209107<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_11").dialog({autoOpen:false,title:'Response Header',width:'80%'});$("#a_11").click(function(){$("#div_11").dialog('open');return false;});})</script>
+<TR>
+<TD align=center>813</TD>
+<TD align=center>10/24/2011 12:36:48 PM</TD>
+<TD align=center>192.168.1.29 (49791)</TD>
+<TD align=center><a id='a_12' href='#'>GET</a></TD>
+<TD align=center>895</TD>
+<TD align=left width='30%'>http://qa.landroverexcellence.com/admin/data_management/AjaxWebService.asmx/js </TD>
+<TD align=center>85.232.41.95 (80)</TD>
+<TD align=center>815</TD>
+<TD align=center><a href='#' id='a_13' >304, Not modified</a></TD>
+<TD align=center> Resp_Length </TD>
+<TD align=center>00:00:00.0213195</TD>
+<TD align=center> ContentType </TD>
+<TD>
+<input type='button' value='CopyMe' onclick ="var str = 'ipv4.Address==192.168.1.29 and ipv4.Address==85.232.41.95 and tcp.port == 49791 and tcp.port == 80';if (window.clipboardData){if(clipboardData.setData)clipboardData.setData('text', str);}else{window.prompt('Copy to clipboard: Ctrl+C, Enter', str);}" />
+</TD>
+</TR>
+<DIV ID='div_12' style='DISPLAY: none'>
+<HR>
+GET /admin/data_management/AjaxWebService.asmx/js <BR>
+accept: application/javascript, */*;q=0.8<BR>
+referer: http://qa.landroverexcellence.com/admin/data_management/Reports/CorporateReports/TrainingHistoryReport.aspx<BR>
+accept-language: en-GB<BR>
+useragent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<BR>
+accept-encoding: gzip, deflate<BR>
+host:qa.landroverexcellence.com<BR>
+if-modified-since: Tue, 11 Oct 2011 08:36:42 GMT<BR>
+connection: Keep-Alive<BR>
+cookie:temp:1;temp:p0yoapi3bft5ita0ublzlj3s;temp:5CF82F6C071D1850446DCD5178DB26EBC145E3FA5E556672BB676849AB2F5E62EDD7CEEB0A81013D6C828F2F3BCA99FD7776EBF28969A62846A30B8564F6EEF3A3E6A87AC6BA84459E010853D841EC82B3F0A85F3FA56E68FC22603E76B6B0A495359EE12481B982B98C09645108F64BE8AD3B94D9AB1C0CFB360782741D99988C93AF66F00A482DE8B79E84F47F9A65DDE55D57F4267600928EE825DE307AECA7211BB6;temp:{'SelectedItems':['11:2'],'ExpandedItems':['11']}
+<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_12").dialog({autoOpen:false,title:'Request Header',width:'80%'});$("#a_12").click(function(){$("#div_12").dialog('open');return false;});})</script>
+<script>$</script>
+<DIV ID='div_13' style='DISPLAY: none'>
+<HR>
+connection: close<BR>
+date: Mon, 24 Oct 2011 11:36:45 GMT<BR>
+server: Microsoft-IIS/6.0<BR>
+x-ua-compatible: IE=EmulateIE7<BR>
+xpoweredby: ASP.NET<BR>
+xaspnetversion: 2.0.50727<BR>
+set-cookie: .EXCROLES=; expires=Mon, 11-Oct-1999 23:00:00 GMT; path=/; HttpOnly<BR>
+cache-control: private<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_13").dialog({autoOpen:false,title:'Response Header',width:'80%'});$("#a_13").click(function(){$("#div_13").dialog('open');return false;});})</script>
+<TR>
+<TD align=center>889</TD>
+<TD align=center>10/24/2011 12:36:51 PM</TD>
+<TD align=center>192.168.1.29 (49793)</TD>
+<TD align=center><a id='a_14' href='#'>POST</a></TD>
+<TD align=center>97458716</TD>
+<TD align=left width='30%'>http://qa.landroverexcellence.com/admin/data_management/Reports/CorporateReports/TrainingHistoryReport.aspx </TD>
+<TD align=center>85.232.41.95 (80)</TD>
+<TD align=center> -- </TD>
+<TD align=center>NO_RESPONSE</TD>
+<TD align=center> -- </TD>
+<TD align=center> -- </TD>
+<TD align=center> -- </TD>
+<TD>
+<input type='button' value='CopyMe' onclick ="var str = 'ipv4.Address==192.168.1.29 and ipv4.Address==85.232.41.95 and tcp.port == 49793 and tcp.port == 80';if (window.clipboardData){if(clipboardData.setData)clipboardData.setData('text', str);}else{window.prompt('Copy to clipboard: Ctrl+C, Enter', str);}" />
+</TD>
+</TR>
+<DIV ID='div_14' style='DISPLAY: none'>
+<HR>
+POST /admin/data_management/Reports/CorporateReports/TrainingHistoryReport.aspx <BR>
+accept: text/html, application/xhtml+xml, */*<BR>
+referer: http://qa.landroverexcellence.com/admin/data_management/Reports/CorporateReports/TrainingHistoryReport.aspx<BR>
+accept-language: en-GB<BR>
+useragent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<BR>
+contenttype: application/x-www-form-urlencoded<BR>
+accept-encoding: gzip, deflate<BR>
+host:qa.landroverexcellence.com<BR>
+contentlength: 58716<BR>
+connection: Keep-Alive<BR>
+cache-control: no-cache<BR>
+cookie:temp:1;temp:p0yoapi3bft5ita0ublzlj3s;temp:5CF82F6C071D1850446DCD5178DB26EBC145E3FA5E556672BB676849AB2F5E62EDD7CEEB0A81013D6C828F2F3BCA99FD7776EBF28969A62846A30B8564F6EEF3A3E6A87AC6BA84459E010853D841EC82B3F0A85F3FA56E68FC22603E76B6B0A495359EE12481B982B98C09645108F64BE8AD3B94D9AB1C0CFB360782741D99988C93AF66F00A482DE8B79E84F47F9A65DDE55D57F4267600928EE825DE307AECA7211BB6;temp:{'SelectedItems':['11:2'],'ExpandedItems':['11']}
+<BR>
+
+<HR>
+</DIV>
+<script>$(document).ready(function(){$("#div_14").dialog({autoOpen:false,title:'Request Header',width:'80%'});$("#a_14").click(function(){$("#div_14").dialog('open');return false;});})</script>
+<script>$</script>
+</tbody></TABLE>
+</BODY>
+</HTML>

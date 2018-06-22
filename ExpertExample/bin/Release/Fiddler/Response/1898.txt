@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Content-Length: 603
+Content-Type: application/xml; charset=utf-8
+Last-Modified: Sat, 05 Oct 2013 12:45:57 GMT
+Server: Microsoft-IIS/8.0
+X-WNS-Tag: 0DJI
+X-ABF-LatencyMilliSec: 9
+X-ABF-GUID: 8378be99-fcc4-47ac-b026-0232af64450b
+X-ABF-FromCache: True,True,True
+X-ABF-Expired: False,False,False
+X-ABF-FromProvider: False,False,False
+X-ABF-CacheSource: FinanceServices,FinanceServices,DataFetcher
+X-ABF-CacheURL: AzureDeployment,AzureDeployment,AzureDeployment
+X-ABF-CacheInsertTime: 10/5/2013 12:45:27 PM,10/5/2013 12:38:42 PM,10/5/2013 12:44:11 PM
+X-ABF-CacheExpireTime: 10/5/2013 12:55:27 PM,10/6/2013 12:38:42 PM,10/5/2013 12:49:11 PM
+X-ABF-CacheLatency: 1,1,2
+X-ABF-CacheKey: SR_30.10.!DJI,IDXCTS_30.10.!DJI,ATDEFIDXC_30.10.!DJI.126.$INDU
+Access-Control-Allow-Origin: https://ssl-api.bing.com
+X-ABF-EndPoint: SEAS
+X-Deployment: rd00155d34541b
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Cache-Control: public, max-age=23
+Expires: Sat, 05 Oct 2013 12:47:48 GMT
+Date: Sat, 05 Oct 2013 12:47:25 GMT
+Connection: keep-alive
+
+<tile><visual lang="EN-US" addImageQuery="true"><binding template="TileWideImageAndText02" branding="logo"><image id="1" src="http://finance.services.appex.bing.com/Market.svc/ResolveAppTileChart/126.10.!DJI.126.$INDU/a469953b-03e9

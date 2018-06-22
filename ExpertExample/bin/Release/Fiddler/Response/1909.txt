@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Content-Length: 618
+Content-Type: application/xml; charset=utf-8
+Last-Modified: Sat, 05 Oct 2013 12:46:17 GMT
+Server: Microsoft-IIS/8.0
+X-WNS-Tag: 0SPX
+X-ABF-LatencyMilliSec: 12
+X-ABF-GUID: 90f950c9-2b1b-42e0-a1d8-4abf64a59280
+X-ABF-FromCache: True,True,True
+X-ABF-Expired: False,False,False
+X-ABF-FromProvider: False,False,False
+X-ABF-CacheSource: DataFetcher,FinanceServices,DataFetcher
+X-ABF-CacheURL: AzureDeployment,AzureDeployment,AzureDeployment
+X-ABF-CacheInsertTime: 10/5/2013 12:46:02 PM,10/5/2013 6:33:42 AM,10/5/2013 12:44:11 PM
+X-ABF-CacheExpireTime: 10/5/2013 12:47:02 PM,10/6/2013 6:33:42 AM,10/5/2013 12:49:11 PM
+X-ABF-CacheLatency: 2,4,1
+X-ABF-CacheKey: SR_33.10.SPX,IDXCTS_33.10.SPX,ATDEFIDXC_33.10.SPX
+Access-Control-Allow-Origin: https://ssl-api.bing.com
+X-ABF-EndPoint: SEAS
+X-Deployment: rd00155d345238
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Cache-Control: public, max-age=10
+Expires: Sat, 05 Oct 2013 12:47:35 GMT
+Date: Sat, 05 Oct 2013 12:47:25 GMT
+Connection: keep-alive
+
+<tile><visual lang="EN-US" addImageQuery="true"><binding template="TileWideImageAndText02" branding="logo"><image id="1" src="http://finance.services.appex.bing.com/Market.svc/ResolveAppTileChart/126.10.SPX/61265139-83e5-4a18-825b-5d592fca8fb4" alt=

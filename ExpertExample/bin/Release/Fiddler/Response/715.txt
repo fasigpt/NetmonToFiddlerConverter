@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Server: Apache
+EMEA-Info: wci043  0.019
+Content-Type: text/xml
+X-Varnish: 2126095032 2126094808
+X-Varnish-Cache: HIT
+X-Varnish-Hits: 1
+X-Varnish: 1073048733
+Vary: Accept-Encoding
+Cache-Control: public, max-age=60
+Date: Sat, 05 Oct 2013 12:47:09 GMT
+Content-Length: 578
+Connection: keep-alive
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tile><visual><binding branding="name" template="TileWideSmallImageAndText03"><image alt="Hafeez axed for South Africa Tests" id="1" src="http://static.cricinfo.com/db/PICTURES/CMS/154000/154034.1.jpg" /><text id="1">Hafeez axed for South Africa Tests</text></binding><binding branding="name" template="TileSquarePeekImageAndText04"><image alt="Hafeez axed for South Africa Tests" id="1" src="http://static.cricinfo.com/db/PICTURES/CMS/154000/154034.1.jpg" /><text id="1">Hafeez axed for South Africa Tests</text></binding></visual></tile>

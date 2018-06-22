@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>"C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\3.cap" /d "%28tcp  and not%28contains%28Description, %27PayloadLen=0%27%29%29 and not SSDP and not TLS and not SSL%29" /o "D:\Project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\test.cap.Report.htm"</StartArguments>
+    <RemoteDebugEnabled>true</RemoteDebugEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PublishUrlHistory>publish\</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartArguments>"C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\pdf.cap" /d "%28tcp and not%28contains%28Description, %27PayloadLen=0%27%29%29 and not SSDP and not TLS and not SSL%29" /o "D:\Project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\test.cap.Report.htm"</StartArguments>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,8 @@
+GET /usappex/i/CC/429FB84554C32D3C5C370D0184ED2.jpg HTTP/1.1
+Accept: */*
+Accept-Encoding: identity
+Range: bytes=0-4552
+User-Agent: Microsoft BITS/7.6
+Connection: Keep-Alive
+Host: appexblu.stb.s-msn.com
+

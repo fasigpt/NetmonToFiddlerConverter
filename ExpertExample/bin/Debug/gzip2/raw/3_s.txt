@@ -1,0 +1,23 @@
+HTTP/1.1 403 Forbidden ( Forefront TMG denied the specified Uniform Resource Locator (URL).  )
+Via: 1.1 BLR-PRXY-01
+Connection: close
+Proxy-Connection: close
+Pragma: no-cache
+Cache-Control: no-cache
+Content-Type: text/html
+Content-Length: 676
+
+<HTML><HEAD><TITLE>Error Message</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<BODY>
+<TABLE><TR><TD id=L_dt_1><B>Network Access Message: The page cannot be displayed<B></TR></TABLE>
+<TABLE><TR><TD height=15></TD></TR></TABLE>
+<TABLE>
+<TR><TD id=L_dt_2>Technical Information (for Support personnel)
+<UL>
+<LI id=L_dt_3>Error Code: 403 Forbidden. Forefront TMG denied the specified Uniform Resource Locator (URL). (12232)
+<LI id=L_dt_4>IP Address: 10.171.65.148
+<LI id=L_dt_5>Date: 10/4/2013 3:37:43 PM [GMT]
+<LI id=L_dt_6>Server: BLR-PRXY-01.fareast.corp.microsoft.com
+<LI id=L_dt_7>Source: proxy
+</UL></TD></TR></TABLE></BODY></HTML>

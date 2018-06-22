@@ -1,0 +1,95 @@
+﻿Frame #613 8/8/2011 5:55:47 PM
+Print Frame Info? (y/n) y
+Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[00-07-B3-F5-A8-00],SourceAddress:[1C-C1-DE-32-0D-72]
+Ethernet.DestinationAddress: Cisco Systems Inc. F5A800 [00-07-B3-F5-A8-00]
+Ethernet.DestinationAddress.Rsv: (000000..)
+Ethernet.DestinationAddress.UL:  (......0.) Universally Administered Address
+Ethernet.DestinationAddress.IG:  (.......0) Individual address (unicast)
+Ethernet.SourceAddress: 1CC1DE 320D72 [1C-C1-DE-32-0D-72]
+Ethernet.SourceAddress.Rsv: (000111..)
+Ethernet.SourceAddress.UL:  (......0.) Universally Administered Address
+Ethernet.SourceAddress.IG:  (.......0) Individual address (unicast)
+Ethernet.EthernetType: Internet IP (IPv4), 2048(0x800)
+Ethernet.Ipv4: Src = 10.171.71.31, Dest = 157.54.108.28, Next Protocol = TCP, Packet ID = 22879, Total IP Length = 1500
+Ethernet.Ipv4.Versions: IPv4, Internet Protocol; Header Length = 20
+Ethernet.Ipv4.Versions.Version:      (0100....) IPv4, Internet Protocol
+Ethernet.Ipv4.Versions.HeaderLength: (....0101) 20 bytes (0x5)
+Ethernet.Ipv4.DifferentiatedServicesField: DSCP: 0, ECN: 0
+Ethernet.Ipv4.DifferentiatedServicesField.DSCP: (000000..) Differentiated services codepoint 0
+Ethernet.Ipv4.DifferentiatedServicesField.ECT:  (......0.) ECN-Capable Transport not set
+Ethernet.Ipv4.DifferentiatedServicesField.CE:   (.......0) ECN-CE not set
+Ethernet.Ipv4.TotalLength: 1500 (0x5DC)
+Ethernet.Ipv4.Identification: 22879 (0x595F)
+Ethernet.Ipv4.FragmentFlags: 16384 (0x4000)
+Ethernet.Ipv4.FragmentFlags.Reserved: (0...............)
+Ethernet.Ipv4.FragmentFlags.DF:       (.1..............) Do not fragment
+Ethernet.Ipv4.FragmentFlags.MF:       (..0.............) This is the last fragment
+Ethernet.Ipv4.FragmentFlags.Offset:   (...0000000000000) 0
+Ethernet.Ipv4.TimeToLive: 128 (0x80)
+Ethernet.Ipv4.NextProtocol: TCP, 6(0x6)
+Ethernet.Ipv4.Checksum: 0 (0x0)
+Ethernet.Ipv4.SourceAddress: 10.171.71.31
+Ethernet.Ipv4.DestinationAddress: 157.54.108.28
+Ethernet.Ipv4.Options: Empty
+Ethernet.Ipv4.Tcp: Flags=...AP..., SrcPort=59521, DstPort=HTTP(80), PayloadLen=1460, Seq=2840199031 - 2840200491, Ack=3232623505, Win=62802
+Ethernet.Ipv4.Tcp.SrcPort: 59521
+Ethernet.Ipv4.Tcp.DstPort: HTTP(80)
+Ethernet.Ipv4.Tcp.SequenceNumber: 2840199031 (0xA949FF77)
+Ethernet.Ipv4.Tcp.AcknowledgementNumber: 3232623505 (0xC0ADEB91)
+Ethernet.Ipv4.Tcp.DataOffset: 80 (0x50)
+Ethernet.Ipv4.Tcp.DataOffset.DataOffset: (0101....) 20 bytes
+Ethernet.Ipv4.Tcp.DataOffset.Reserved:   (....000.)
+Ethernet.Ipv4.Tcp.DataOffset.NS:         (.......0) Nonce Sum not significant
+Ethernet.Ipv4.Tcp.Flags: ...AP...
+Ethernet.Ipv4.Tcp.Flags.CWR:    (0.......) CWR not significant
+Ethernet.Ipv4.Tcp.Flags.ECE:    (.0......) ECN-Echo not significant
+Ethernet.Ipv4.Tcp.Flags.Urgent: (..0.....) Not Urgent Data
+Ethernet.Ipv4.Tcp.Flags.Ack:    (...1....) Acknowledgement field significant
+Ethernet.Ipv4.Tcp.Flags.Push:   (....1...) Push Function
+Ethernet.Ipv4.Tcp.Flags.Reset:  (.....0..) No Reset
+Ethernet.Ipv4.Tcp.Flags.Syn:    (......0.) Not Synchronize sequence numbers
+Ethernet.Ipv4.Tcp.Flags.Fin:    (.......0) Not End of data
+Ethernet.Ipv4.Tcp.Window: 62802
+Ethernet.Ipv4.Tcp.Checksum: 0x60EB, Disregarded
+Ethernet.Ipv4.Tcp.UrgentPointer: 0 (0x0)
+Ethernet.Ipv4.Tcp.TCPPayload: SourcePort = 59521, DestinationPort = 80
+Ethernet.Ipv4.Tcp.TCPPayload.Http: Request, GET http://c.microsoft.com/trans_pixel.aspx, Query:tz=7&cot=5&qos.uri=http://www.microsoft.com/en-us/default.aspx&qos.ti=1312851347590&ts=1312851347590&qos.tl=&qos.n=init
+Ethernet.Ipv4.Tcp.TCPPayload.Http._BuildHTTPConversation: Empty
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request: CRLF
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.Command: GET
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI: Request, GET http://c.microsoft.com/trans_pixel.aspx, Query:tz=7&cot=5&qos.uri=http://www.microsoft.com/en-us/default.aspx&qos.ti=1312851347590&ts=1312851347590&qos.tl=&qos.n=init
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri: Empty
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Location: http://c.microsoft.com/trans_pixel.aspx
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters: Struct or Array types expect description
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters.Fields: Struct or Array types expect description
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters.Fields.tz: (AsciiStringTerm) 7
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters.Fields.cot: (AsciiStringTerm) 5
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters.Fields.qos.uri: (AsciiStringTerm) http://www.microsoft.com/en-us/default.aspx
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters.Fields.qos.ti: (AsciiStringTerm) 1312851347590
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters.Fields.ts: (AsciiStringTerm) 1312851347590
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters.Fields.qos.tl: (AsciiStringTerm) Empty
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.URI.Uri.Parameters.Fields.qos.n: (AsciiStringTerm) init
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.ProtocolVersion: HTTP/1.1
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields: Struct or Array types expect description
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Accept: (AsciiStringTerm)  text/css
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Referer: (AsciiStringTerm)  http://www.microsoft.com/en-us/default.aspx
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Accept-Language: (AsciiStringTerm)  en-US
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.UserAgent: (AsciiStringTerm)  Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Accept-Encoding: (AsciiStringTerm)  gzip, deflate
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Host: (AsciiStringTerm)c.microsoft.com
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.ProxyConnection: (AsciiStringTerm)  Keep-Alive
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Pragma: (AsciiStringTerm)  no-cache
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie: (AsciiStringTerm) String is too long to display
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies: Struct or Array types expect description
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. WT_FPC: (AsciiStringTerm) id=131.107.0.118-479092112.30156003:lv=1312847718583:ss=1312847704385
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. MUID: (AsciiStringTerm) 1E663BD0EE326D21369639DAEB326D47
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. MSID: (AsciiStringTerm) Microsoft.CreationDate=06/07/2011 07:18:37&Microsoft.LastVisitDate=08/09/2011 00:55:04&Microsoft.VisitStartDate=08/09/2011 00:55:04&Microsoft.CookieId=abb77779-217b-4a02-8473-365138840bc3&Microsoft.TokenId=ffffffff-ffff-ffff-ffff-ffffffffffff&Microsoft.NumberOfVisits=7&Microsoft.CookieFirstVisit=1&Microsoft.IdentityToken=AA==&Microsoft.MicrosoftId=0379-0676-1919-5177
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. MC1: (AsciiStringTerm) GUID=9496cbe3192a414eaf17750db621cc1a&HASH=9496&LV=20116&V=3
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. A: (AsciiStringTerm) I&I=AxUFAAAAAABgCQAAL/fk+LlJjgoXKHWFxHqECA!!&CS=127@OS000119d0002h19d00
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. omniID: (AsciiStringTerm) 5e92ad0b_32cd_4e0d_a443_23816f9e94cf
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. WT_NVR_RU: (AsciiStringTerm) 0=technet|msdn:1=:2=
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. MS0: (AsciiStringTerm) 33befa2bbe654bb7bded4b8f94bafefe
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderFields.Cookie.Cookies. MICROSOFTSESSIONCOOKIE: (AsciiStringTerm) Microsoft.CookieId=30740645-45eb-49bb-945e-bec07a753fec&Microsoft.CreationDate=08/09/2011 00:55:04&Microsoft.LastVisitDate=08/09/2011 00:55:04&Microsoft.NumberOfVisits=1&SessionCookie.Id=5B52096B4C6305D30ADB95DDE94C7F4B
+
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Request.HeaderEnd: CRLF
+Ethernet.Ipv4.Tcp.TCPPayload.Http.defaultname: Empty

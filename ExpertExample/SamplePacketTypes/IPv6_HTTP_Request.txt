@@ -1,0 +1,62 @@
+﻿IPv6: Next Protocol = ESP, Payload Length = 416
+IPv6.Versions: IPv6, Internet Protocol, DSCP 0
+IPv6.Versions.Version:  (0110............................) IPv6, Internet Protocol, 6(0x6)
+IPv6.Versions.DSCP:     (....000000......................) Differentiated services codepoint 0
+IPv6.Versions.ECT:      (..........0.....................) ECN-Capable Transport not set
+IPv6.Versions.CE:       (...........0....................) ECN-CE not set
+IPv6.Versions.FlowLabe: (............00000000000000000000) 0
+IPv6.PayloadLength: 416 (0x1A0)
+IPv6.NextProtocol: ESP, 50(0x32)
+IPv6.HopLimit: 64 (0x40)
+IPv6.SourceAddress: 2001:4898:0:FFF:0:5EFE:AAB:471F
+IPv6.DestinationAddress: 2001:4898:0:FFF:0:5EFE:AAB:426F
+IPv6.ExtensionHeaders: Empty
+IPv6.Esp: Next Protocol = TCP, SPI = 0x4658d6c8, Seq = 0x7
+IPv6.Esp.SecurityParameterIndex: 1180227272 (0x4658D6C8)
+IPv6.Esp.SequenceNumber: 7 (0x7)
+IPv6.Esp.Tcp: Flags=...AP..., SrcPort=59537, DstPort=HTTP(80), PayloadLen=371, Seq=4251372632 - 4251373003, Ack=2099161074, Win=4182
+IPv6.Esp.Tcp.SrcPort: 59537
+IPv6.Esp.Tcp.DstPort: HTTP(80)
+IPv6.Esp.Tcp.SequenceNumber: 4251372632 (0xFD66CC58)
+IPv6.Esp.Tcp.AcknowledgementNumber: 2099161074 (0x7D1EA7F2)
+IPv6.Esp.Tcp.DataOffset: 80 (0x50)
+IPv6.Esp.Tcp.DataOffset.DataOffset: (0101....) 20 bytes
+IPv6.Esp.Tcp.DataOffset.Reserved:   (....000.)
+IPv6.Esp.Tcp.DataOffset.NS:         (.......0) Nonce Sum not significant
+IPv6.Esp.Tcp.Flags: ...AP...
+IPv6.Esp.Tcp.Flags.CWR:    (0.......) CWR not significant
+IPv6.Esp.Tcp.Flags.ECE:    (.0......) ECN-Echo not significant
+IPv6.Esp.Tcp.Flags.Urgent: (..0.....) Not Urgent Data
+IPv6.Esp.Tcp.Flags.Ack:    (...1....) Acknowledgement field significant
+IPv6.Esp.Tcp.Flags.Push:   (....1...) Push Function
+IPv6.Esp.Tcp.Flags.Reset:  (.....0..) No Reset
+IPv6.Esp.Tcp.Flags.Syn:    (......0.) Not Synchronize sequence numbers
+IPv6.Esp.Tcp.Flags.Fin:    (.......0) Not End of data
+IPv6.Esp.Tcp.Window: 4182
+IPv6.Esp.Tcp.Checksum: 0xDDC4, Disregarded
+IPv6.Esp.Tcp.UrgentPointer: 0 (0x0)
+IPv6.Esp.Tcp.TCPPayload: SourcePort = 59537, DestinationPort = 80
+IPv6.Esp.Tcp.TCPPayload.Http: Request, GET /time.aspx
+IPv6.Esp.Tcp.TCPPayload.Http._BuildHTTPConversation: Empty
+IPv6.Esp.Tcp.TCPPayload.Http.Request: CRLF
+IPv6.Esp.Tcp.TCPPayload.Http.Request.Command: GET
+IPv6.Esp.Tcp.TCPPayload.Http.Request.URI: Request, GET /time.aspx
+IPv6.Esp.Tcp.TCPPayload.Http.Request.URI.Uri: Empty
+IPv6.Esp.Tcp.TCPPayload.Http.Request.URI.Uri.Location: /time.aspx
+IPv6.Esp.Tcp.TCPPayload.Http.Request.ProtocolVersion: HTTP/1.1
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderFields: Struct or Array types expectdescription
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderFields.Accept: (AsciiStringTerm)  */*
+
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderFields.Accept-Language: (AsciiStringTerm)  en-US
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderFields.UserAgent: (AsciiStringTerm)Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; .NET CLR2.0.50727; .NET4.0C; .NET4.0E; .NET CLR 3.5.30729; .NET CLR 3.0.30729; InfoPath.3; .NET CLR 1.1.4322; MS-RTC LM 8)
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderFields.Accept-Encoding: (AsciiStringTerm)  gzip, deflate
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderFields.Host: (AsciiStringTerm)  nazeef-2k8
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderFields.Connection: (AsciiStringTerm) Keep-Alive
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderFields.Cache-Control: (AsciiStringTerm)  no-cache
+IPv6.Esp.Tcp.TCPPayload.Http.Request.HeaderEnd: CRLF
+IPv6.Esp.Tcp.TCPPayload.Http.defaultname: Empty
+IPv6.Esp.Trailer: PadLength = 3, Encapsulated Protocol = TCP
+IPv6.Esp.Trailer.PaddingData: Binary Large Object (3 Bytes)
+IPv6.Esp.Trailer.PaddingLength: 3 (0x3)
+IPv6.Esp.Trailer.NextProtocol: TCP, 6(0x6)
+IPv6.Esp.Trailer.AuthenticationData: Binary Large Object (12 Bytes)

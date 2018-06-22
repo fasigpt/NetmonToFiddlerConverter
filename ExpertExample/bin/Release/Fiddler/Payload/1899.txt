@@ -1,0 +1,1 @@
+-4e2c-bc7b-870a5229b750" alt="alt text"/><text id="1">‎DOW‎ ‎-‎ ‎10/4/2013‎</text><text id="2">‎15,072.58‎ ‎▲‎ ‎+0.51%‎</text></binding><binding template="TileSquareText01" branding="logo"><text id="1">‎DOW‎</text><text id="2">15,072.58</text><text id="3">‎▲‎ ‎+0.51%‎</text><text id="4">4:30 PM EDT</text></binding></visual></tile>

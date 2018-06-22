@@ -1,0 +1,1 @@
+-4d6b-bc6e-1559b8d09d4a" alt="alt text"/><text id="1">‎NASDAQ‎ ‎-‎ ‎10/4/2013‎</text><text id="2">‎3,807.75‎ ‎▲‎ ‎+0.89%‎</text></binding><binding template="TileSquareText01" branding="logo"><text id="1">‎NASDAQ‎</text><text id="2">3,807.75</text><text id="3">‎▲‎ ‎+0.89%‎</text><text id="4">5:15 PM EDT</text></binding></visual></tile>

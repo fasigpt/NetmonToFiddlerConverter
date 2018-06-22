@@ -1,0 +1,12 @@
+GET /pki/mscorp/crl/mscrca.crl HTTP/1.1
+Cache-Control: max-age = 6574
+Accept: */*
+Accept-Encoding: peerdist
+If-Modified-Since: Mon, 16 Sep 2013 19:52:06 GMT
+If-None-Match: "0f7903816b3ce1:0"
+User-Agent: Microsoft-CryptoAPI/6.2
+Connection: Keep-Alive
+X-P2P-PeerDist: Version=1.1
+X-P2P-PeerDistEx: MinContentInformation=1.0, MaxContentInformation=2.0
+Host: mscrl.microsoft.com
+

@@ -1,0 +1,90 @@
+﻿Frame #893 8/8/2011 5:55:48 PM
+Print Frame Info? (y/n) y
+Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[1C-C1-DE-32-0D-72],SourceAddress:[00-07-B3-F5-A8-00]
+Ethernet.DestinationAddress: 1CC1DE 320D72 [1C-C1-DE-32-0D-72]
+Ethernet.DestinationAddress.Rsv: (000111..)
+Ethernet.DestinationAddress.UL:  (......0.) Universally Administered Address
+Ethernet.DestinationAddress.IG:  (.......0) Individual address (unicast)
+Ethernet.SourceAddress: Cisco Systems Inc. F5A800 [00-07-B3-F5-A8-00]
+Ethernet.SourceAddress.Rsv: (000000..)
+Ethernet.SourceAddress.UL:  (......0.) Universally Administered Address
+Ethernet.SourceAddress.IG:  (.......0) Individual address (unicast)
+Ethernet.EthernetType: Internet IP (IPv4), 2048(0x800)
+Ethernet.Ipv4: Src = 157.54.108.28, Dest = 10.171.71.31, Next Protocol = TCP, Pa
+cket ID = 21879, Total IP Length = 511
+Ethernet.Ipv4.Versions: IPv4, Internet Protocol; Header Length = 20
+Ethernet.Ipv4.Versions.Version:      (0100....) IPv4, Internet Protocol
+Ethernet.Ipv4.Versions.HeaderLength: (....0101) 20 bytes (0x5)
+Ethernet.Ipv4.DifferentiatedServicesField: DSCP: 0, ECN: 0
+Ethernet.Ipv4.DifferentiatedServicesField.DSCP: (000000..) Differentiated services codepoint 0
+Ethernet.Ipv4.DifferentiatedServicesField.ECT:  (......0.) ECN-Capable Transport not set
+Ethernet.Ipv4.DifferentiatedServicesField.CE:   (.......0) ECN-CE not set
+Ethernet.Ipv4.TotalLength: 511 (0x1FF)
+Ethernet.Ipv4.Identification: 21879 (0x5577)
+Ethernet.Ipv4.FragmentFlags: 16384 (0x4000)
+Ethernet.Ipv4.FragmentFlags.Reserved: (0...............)
+Ethernet.Ipv4.FragmentFlags.DF:       (.1..............) Do not fragment
+Ethernet.Ipv4.FragmentFlags.MF:       (..0.............) This is the last fragment
+Ethernet.Ipv4.FragmentFlags.Offset:   (...0000000000000) 0
+Ethernet.Ipv4.TimeToLive: 54 (0x36)
+Ethernet.Ipv4.NextProtocol: TCP, 6(0x6)
+Ethernet.Ipv4.Checksum: 37477 (0x9265)
+Ethernet.Ipv4.SourceAddress: 157.54.108.28
+Ethernet.Ipv4.DestinationAddress: 10.171.71.31
+Ethernet.Ipv4.Options: Empty
+Ethernet.Ipv4.Tcp: Flags=...AP..., SrcPort=HTTP(80), DstPort=59521, PayloadLen=471, Seq=3232623505 - 3232623976, Ack=2840200491, Win=65535
+Ethernet.Ipv4.Tcp.SrcPort: HTTP(80)
+Ethernet.Ipv4.Tcp.DstPort: 59521
+Ethernet.Ipv4.Tcp.SequenceNumber: 3232623505 (0xC0ADEB91)
+Ethernet.Ipv4.Tcp.AcknowledgementNumber: 2840200491 (0xA94A052B)
+Ethernet.Ipv4.Tcp.DataOffset: 80 (0x50)
+Ethernet.Ipv4.Tcp.DataOffset.DataOffset: (0101....) 20 bytes
+Ethernet.Ipv4.Tcp.DataOffset.Reserved:   (....000.)
+Ethernet.Ipv4.Tcp.DataOffset.NS:         (.......0) Nonce Sum not significant
+Ethernet.Ipv4.Tcp.Flags: ...AP...
+Ethernet.Ipv4.Tcp.Flags.CWR:    (0.......) CWR not significant
+Ethernet.Ipv4.Tcp.Flags.ECE:    (.0......) ECN-Echo not significant
+Ethernet.Ipv4.Tcp.Flags.Urgent: (..0.....) Not Urgent Data
+Ethernet.Ipv4.Tcp.Flags.Ack:    (...1....) Acknowledgement field significant
+Ethernet.Ipv4.Tcp.Flags.Push:   (....1...) Push Function
+Ethernet.Ipv4.Tcp.Flags.Reset:  (.....0..) No Reset
+Ethernet.Ipv4.Tcp.Flags.Syn:    (......0.) Not Synchronize sequence numbers
+Ethernet.Ipv4.Tcp.Flags.Fin:    (.......0) Not End of data
+Ethernet.Ipv4.Tcp.Window: 65535
+Ethernet.Ipv4.Tcp.Checksum: 0xAD44, Good
+Ethernet.Ipv4.Tcp.UrgentPointer: 0 (0x0)
+Ethernet.Ipv4.Tcp.TCPPayload: SourcePort = 80, DestinationPort = 59521
+Ethernet.Ipv4.Tcp.TCPPayload.Http: Response, HTTP/1.1, Status: Ok, URL: http://c.microsoft.com/trans_pixel.aspx- GIF: Version=GIF89a, Width=1, Length=1
+Ethernet.Ipv4.Tcp.TCPPayload.Http._BuildHTTPConversation: Empty
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response: CRLF
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.ProtocolVersion: (AsciiStringTerm) HTTP/1.1
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.StatusCode: 200, Ok
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.Reason: (AsciiStringTerm) OK
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields: Struct or Array types expect description
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.ProxyConnection: (AsciiStringTerm)  Keep-Alive
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.Connection: (AsciiStringTerm)  Keep-Alive
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.ContentLength: (AsciiStringTerm)  44
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.Via: (AsciiStringTerm)1.1 RED-PRXY-25
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.Date: (AsciiStringTerm) Tue, 09 Aug 2011 00:55:47 GMT
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.ContentType:  image/gif
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.ContentType.MediaType: (AsciiStringTerm)  image/gif
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.Server: (AsciiStringTerm)  Microsoft-IIS/7.5
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.Set-Cookie: (AsciiStringTerm)  MS0=33befa2bbe654bb7bded4b8f94bafefe; domain=.microsoft.com; expires=Tue, 09-Aug-2011 01:25:48 GMT; path=/
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.XPoweredBy: (AsciiStringTerm)  ASP.NET
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderFields.P3P: (AsciiStringTerm)CP="CAO DSP TAIa OUR IND PHY ONL UNI PUR COM NAV INT DEM CNT STA PRE LOC"
+Ethernet.Ipv4.Tcp.TCPPayload.Http.Response.HeaderEnd: CRLF
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload: HttpContentType =  image/gif
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF: Version=GIF89a, Width=1, Length=1
+
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.Version: (AsciiString) GIF89a
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.Width: 1 (0x1)
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.Height: 1 (0x1)
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.GlobalSettings: 128 (0x80)
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.GlobalSettings.GlobalColorTableSize: (.....000) Size of table: 0
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.GlobalSettings.SortFlag:   (....0...) Global table not in order
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.GlobalSettings.ColorResolution:   (.000....) Bits-per-primary-color: 1
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.GlobalSettings.GlobalColorTableFlag: (1.......) Global color table is present
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.BackgroundColorIndex: 0 (0x0)
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.PixelAspectRatio: (UINT8) 0
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.GlobalColorTable: Binary Large Object (6 Bytes)
+Ethernet.Ipv4.Tcp.TCPPayload.Http.payload.GIF.RestOfData: Binary Large Object (25 Bytes)

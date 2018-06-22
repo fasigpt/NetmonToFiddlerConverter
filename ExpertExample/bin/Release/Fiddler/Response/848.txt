@@ -1,0 +1,18 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Length: 113
+Content-Type: text/html; charset=utf-8
+Expires: Sat, 05 Oct 2013 12:46:10 GMT
+Server: Microsoft-IIS/7.5
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+PPServer: PPV: 30 H: BAYIDSLGN2E096 V: 0
+Date: Sat, 05 Oct 2013 12:47:09 GMT
+Connection: close
+
+<Config>
+    <DeviceID minversion="14.500.21648.00"/>
+    <MobileCfg minversion="14.500.21709.0"/>
+</Config>

@@ -1,0 +1,8 @@
+GET /Market.svc/AppTile?symbol=126.10.SPX&type=0&mkt=EN-US&mode=0 HTTP/1.1
+User-Agent: Microsoft-WNS/6.2
+Host: appexbingfinance.trafficmanager.net
+Pragma: no-cache
+X-P2P-PeerDist: Version=1.1
+X-P2P-PeerDistEx: MinContentInformation=1.0, MaxContentInformation=2.0
+Accept-Encoding: peerdist
+

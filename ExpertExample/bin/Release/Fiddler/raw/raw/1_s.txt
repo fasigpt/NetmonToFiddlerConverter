@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Content-Length: 17101
+Content-Type: application/octet-stream
+Last-Modified: Fri, 29 Jun 2012 01:54:40 GMT
+Accept-Ranges: bytes
+ETag: "e1374e259a55cd1:0"
+Server: Microsoft-IIS/7.5
+X-Powered-By: ASP.NET
+Date: Sat, 05 Oct 2013 12:47:06 GMT
+Connection: keep-alive
+X-CCC: IN
+X-CID: 2
+

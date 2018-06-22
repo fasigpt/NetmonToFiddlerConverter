@@ -1,0 +1,6 @@
+HTTP/1.1 404 Fiddled
+Content-Length: 512
+Date: Fri, 04 Oct 2013 15:37:25 GMT
+Cache-Control: max-age=0, must-revalidate
+
+[Fiddler] The Fiddler AutoResponder is enabled, but this request did not match any of the listed rules. Because the "Unmatched requests passthrough" option on the AutoResponder tab is not enabled, this HTTP/404 response has been generated.                                                                                                                                                                                                                                                                                 

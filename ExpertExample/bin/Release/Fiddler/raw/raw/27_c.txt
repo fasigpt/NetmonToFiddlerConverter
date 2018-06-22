@@ -1,0 +1,8 @@
+GET /db/PICTURES/CMS/52200/52242.1.jpg HTTP/1.1
+Accept: */*
+Accept-Encoding: identity
+Range: bytes=0-4421
+User-Agent: Microsoft BITS/7.6
+Connection: Keep-Alive
+Host: static.cricinfo.com
+

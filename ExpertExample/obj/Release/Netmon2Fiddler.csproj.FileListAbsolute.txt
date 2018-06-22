@@ -1,0 +1,15 @@
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\Netmon2Fiddler.exe.config
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\Expert.ico
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\My Expert Help File.rtf
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\Netmon2Fiddler.exe
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\Netmon2Fiddler.pdb
+C:\project\n2f\v3\n2f\n2f\ExpertExample\obj\Release\Netmon2Fiddler.exe
+C:\project\n2f\v3\n2f\n2f\ExpertExample\obj\Release\Netmon2Fiddler.pdb
+D:\Project\Netmon2FiddlerExe\n2f\ExpertExample\bin\Release\Netmon2Fiddler.exe.config
+D:\Project\Netmon2FiddlerExe\n2f\ExpertExample\obj\Release\Netmon2Fiddler.exe
+D:\Project\Netmon2FiddlerExe\n2f\ExpertExample\obj\Release\Netmon2Fiddler.pdb
+D:\Project\Netmon2FiddlerExe\n2f\ExpertExample\bin\Release\Expert.ico
+D:\Project\Netmon2FiddlerExe\n2f\ExpertExample\bin\Release\My Expert Help File.rtf
+D:\Project\Netmon2FiddlerExe\n2f\ExpertExample\bin\Release\Netmon2Fiddler.exe
+D:\Project\Netmon2FiddlerExe\n2f\ExpertExample\bin\Release\Netmon2Fiddler.pdb
+D:\Project\Netmon2FiddlerExe\n2f\ExpertExample\obj\Release\Netmon2Fiddler.csprojResolveAssemblyReference.cache

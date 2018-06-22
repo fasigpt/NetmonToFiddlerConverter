@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Content-Type: application/xml; charset=utf-8
+Last-Modified: Sat, 05 Oct 2013 11:52:17 GMT
+ETag: 3f71dae31afd0fd0fbaf824cd1fa3166
+Server: Microsoft-IIS/8.0
+X-WNS-Tag: 0
+X-Diagnostic-S: 00115SIN
+X-Diagnostic-T: 5a74507e-8c3d-424e-8547-8147b1748c72
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+X-Content-Type-Options: nosniff
+Content-Length: 811
+Cache-Control: public, max-age=153
+Date: Sat, 05 Oct 2013 12:47:20 GMT
+Connection: keep-alive
+
+<?xml version="1.0" encoding="utf-8"?><tile><visual version="2" lang="en-in"><binding template="TileSquare150x150PeekImageAndText04" fallback="TileSquarePeekImageAndText04"><image id="1" src="http://appexsin.stb.s-msn.com/sgappex/i/13/5CB58DC834A42312A2AB7532D56DF.jpg" /><text id="1">Nadal returns to world number one</text></binding><binding template="TileWide310x150ImageAndText01" fallback="TileWideImageAndText01"><image id="1" src="http://appexsin.stb.s-msn.com/sgappex/i/65/2A4EBBB8EBFC2DF832DADD2C4D6F2.jpg" /><text id="1">Nadal returns to world number one</text></binding><binding template="TileSquare310x310ImageAndText01"><image id="1" src="http://appexsin.stb.s-msn.com/sgappex/i/42/B0CA626F1AABBC6C89BABB14970BC.jpg" /><text id="1">Nadal returns to world number one</text></binding></visual></tile>

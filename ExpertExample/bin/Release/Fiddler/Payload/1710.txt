@@ -1,0 +1,1 @@
+e1f71" alt="alt text"/><text id="1">‎RUSSELL‎ ‎2...‎ ‎-‎ ‎10/4/2013‎</text><text id="2">‎1,078.25‎ ‎▲‎ ‎+0.69%‎</text></binding><binding template="TileSquareText01" branding="logo"><text id="1">‎RUSSELL‎ ‎2000‎</text><text id="2">1,078.25</text><text id="3">‎▲‎ ‎+0.69%‎</text><text id="4">4:05 PM EDT</text></binding></visual></tile>

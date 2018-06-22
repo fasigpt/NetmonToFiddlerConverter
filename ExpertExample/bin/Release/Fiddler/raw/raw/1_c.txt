@@ -1,0 +1,6 @@
+HEAD /w8/2/windowsupdate/redir/wuredir.cab?1310051247 HTTP/1.1
+Connection: Keep-Alive
+Accept: */*
+User-Agent: Windows-Update-Agent
+Host: ds.download.windowsupdate.com
+

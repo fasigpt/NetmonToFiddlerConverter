@@ -1,0 +1,11 @@
+GET /pdf/pdf-test.pdf HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0; Touch)
+Accept-Encoding: gzip, deflate, peerdist
+Host: www.education.gov.yk.ca
+DNT: 1
+Connection: Keep-Alive
+X-P2P-PeerDist: Version=1.1
+X-P2P-PeerDistEx: MinContentInformation=1.0, MaxContentInformation=2.0
+

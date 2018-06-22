@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: Apache
+EMEA-Info: wci044  0.042
+Content-Type: text/xml
+X-Varnish: 1766667555
+X-Varnish-Cache: MISS
+X-Varnish: 1073048773
+Vary: Accept-Encoding
+Cache-Control: public, max-age=60
+Date: Sat, 05 Oct 2013 12:47:09 GMT
+Content-Length: 574
+Connection: keep-alive
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tile><visual><binding branding="name" template="TileWideSmallImageAndText03"><image alt="Injured Hodge to miss CLT20 final" id="1" src="http://static.cricinfo.com/db/PICTURES/CMS/168200/168265.1.jpg" /><text id="1">Injured Hodge to miss CLT20 final</text></binding><binding branding="name" template="TileSquarePeekImageAndText04"><image alt="Injured Hodge to miss CLT20 final" id="1" src="http://static.cricinfo.com/db/PICTURES/CMS/168200/168265.1.jpg" /><text id="1">Injured Hodge to miss CLT20 final</text></binding></visual></tile>

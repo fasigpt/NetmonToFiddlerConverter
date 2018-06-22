@@ -1,0 +1,70 @@
+﻿Frame #183 8/8/2011 5:55:43 PM
+Print Frame Info? (y/n) y
+IPv6: Next Protocol = ESP, Payload Length = 384
+IPv6.Versions: IPv6, Internet Protocol, DSCP 0
+IPv6.Versions.Version:  (0110............................) IPv6, Internet Protocol, 6(0x6)
+IPv6.Versions.DSCP:     (....000000......................) Differentiated services codepoint 0
+IPv6.Versions.ECT:      (..........0.....................) ECN-Capable Transport not set
+IPv6.Versions.CE:       (...........0....................) ECN-CE not set
+IPv6.Versions.FlowLabe: (............00000000000000000000) 0
+IPv6.PayloadLength: 384 (0x180)
+IPv6.NextProtocol: ESP, 50(0x32)
+IPv6.HopLimit: 64 (0x40)
+IPv6.SourceAddress: 2001:4898:0:FFF:0:5EFE:AAB:426F
+IPv6.DestinationAddress: 2001:4898:0:FFF:0:5EFE:AAB:471F
+IPv6.ExtensionHeaders: Empty
+IPv6.Esp: Next Protocol = TCP, SPI = 0x6a7c8d75, Seq = 0x5
+IPv6.Esp.SecurityParameterIndex: 1786547573 (0x6A7C8D75)
+IPv6.Esp.SequenceNumber: 5 (0x5)
+IPv6.Esp.Tcp: Flags=...AP..., SrcPort=HTTP(80), DstPort=59537, PayloadLen=342, Seq=2099161074 - 2099161416, Ack=4251373003, Win=65
+IPv6.Esp.Tcp.SrcPort: HTTP(80)
+IPv6.Esp.Tcp.DstPort: 59537
+IPv6.Esp.Tcp.SequenceNumber: 2099161074 (0x7D1EA7F2)
+IPv6.Esp.Tcp.AcknowledgementNumber: 4251373003 (0xFD66CDCB)
+IPv6.Esp.Tcp.DataOffset: 80 (0x50)
+IPv6.Esp.Tcp.DataOffset.DataOffset: (0101....) 20 bytes
+IPv6.Esp.Tcp.DataOffset.Reserved:   (....000.)
+IPv6.Esp.Tcp.DataOffset.NS:         (.......0) Nonce Sum not significant
+IPv6.Esp.Tcp.Flags: ...AP...
+IPv6.Esp.Tcp.Flags.CWR:    (0.......) CWR not significant
+IPv6.Esp.Tcp.Flags.ECE:    (.0......) ECN-Echo not significant
+IPv6.Esp.Tcp.Flags.Urgent: (..0.....) Not Urgent Data
+IPv6.Esp.Tcp.Flags.Ack:    (...1....) Acknowledgement field significant
+IPv6.Esp.Tcp.Flags.Push:   (....1...) Push Function
+IPv6.Esp.Tcp.Flags.Reset:  (.....0..) No Reset
+IPv6.Esp.Tcp.Flags.Syn:    (......0.) Not Synchronize sequence numbers
+IPv6.Esp.Tcp.Flags.Fin:    (.......0) Not End of data
+IPv6.Esp.Tcp.Window: 65
+IPv6.Esp.Tcp.Checksum: 0x9896, Good
+IPv6.Esp.Tcp.UrgentPointer: 0 (0x0)
+IPv6.Esp.Tcp.TCPPayload: SourcePort = 80, DestinationPort = 59537
+IPv6.Esp.Tcp.TCPPayload.Http: Response, HTTP/1.1, Status: Ok, URL: /time.aspx
+IPv6.Esp.Tcp.TCPPayload.Http._BuildHTTPConversation: Empty
+IPv6.Esp.Tcp.TCPPayload.Http.Response: CRLF
+IPv6.Esp.Tcp.TCPPayload.Http.Response.ProtocolVersion: (AsciiStringTerm) HTTP/1.1
+IPv6.Esp.Tcp.TCPPayload.Http.Response.StatusCode: 200, Ok
+IPv6.Esp.Tcp.TCPPayload.Http.Response.Reason: (AsciiStringTerm) OK
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields: Struct or Array types expect description
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.Cache-Control: (AsciiStringTerm)  private
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.ContentType:  text/html; charset=utf-8
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.ContentType.MediaType: (AsciiStringTerm)  text/html; charset=utf-8
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.ContentType.MediaType.MainType: (AsciiStringTerm)  text/html
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.ContentType.MediaType.Parameters: Struct or Array types expect description
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.ContentType.MediaType.Parameters.charset: (AsciiStringTerm) utf-8
+
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.Server: (AsciiStringTerm)  Microsoft-IIS/7.0
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.XAspNetVersion: (AsciiStringTerm)  2.0.50727
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.XPoweredBy: (AsciiStringTerm)  ASP.NET
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.X-RespondedBy: (AsciiStringTerm)  nazeef-2k8
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.Date: (AsciiStringTerm)  Tue, 09 Aug 2011 00:55:43 GMT
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderFields.ContentLength: (AsciiStringTerm)  96
+IPv6.Esp.Tcp.TCPPayload.Http.Response.HeaderEnd: CRLF
+IPv6.Esp.Tcp.TCPPayload.Http.payload: HttpContentType =  text/html; charset=utf-8
+IPv6.Esp.Tcp.TCPPayload.Http.payload.HtmlElements: Struct or Array types expectdescription
+IPv6.Esp.Tcp.TCPPayload.Http.payload.HtmlElements.HtmlElement: (AsciiStringTerm) 8/9/2011 6:25:43 AM<a href="./time.aspx">
+IPv6.Esp.Tcp.TCPPayload.Http.payload.HtmlElements.HtmlElement: (AsciiStringTerm) Click here to know the time again</a>
+IPv6.Esp.Tcp.TCPPayload.Http.payload.HtmlElements.HtmlElement: (AsciiStringTerm)80nazeef-2k8
+IPv6.Esp.Trailer: PadLength = 0, Encapsulated Protocol = TCP
+IPv6.Esp.Trailer.PaddingLength: 0 (0x0)
+IPv6.Esp.Trailer.NextProtocol: TCP, 6(0x6)
+IPv6.Esp.Trailer.AuthenticationData: Binary Large Object (12 Bytes)

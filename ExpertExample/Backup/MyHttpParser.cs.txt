@@ -1,0 +1,742 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.NetworkMonitor;
+using Microsoft.NetworkMonitor.Automation;
+using System.Linq;
+
+namespace ExpertExample
+{
+
+    class MyHttpParser
+    {
+        #region Constants
+            private const ulong ERROR_SUCCESS = 0;
+            private const ulong ERROR_NOT_FOUND = 1168;
+            private const ulong ERROR_RESOURCE_NOT_AVAILABLE = 5006;
+            private const uint BUFFER_SIZE = 512;
+        #endregion
+        private static bool initialized;
+        private static ParserCallbackDelegate pErrorCallBack = new ParserCallbackDelegate(ParserCallback);
+
+        public enum HTTPFrameType { Invalid, Request, RequestPayload , Response, ResponsePayload };
+
+
+        /*-----------------------------------------------------------------------------------------------------*/
+        public class HTTPFrame
+        {
+            #region Members
+            public uint Number { get; set; }
+            public DateTime TimeStamp { get; set; }
+            public string SourceIP { get; set; }
+            public uint SourcePort { get; set; }
+            public string DestinationIP { get; set; }
+            public uint DestinationPort { get; set; }
+            #endregion
+
+            #region Constructor
+            public HTTPFrame(IntPtr hParsedFrame, uint frameNumber)
+            {
+                string FieldValue;
+                uint errno;
+                ulong timestamp;
+                Number = frameNumber;
+                #region Set TimeStamp
+                errno = NetmonAPI.NmGetFrameTimeStamp(hParsedFrame, out timestamp);
+                if (errno == ERROR_SUCCESS)
+                {
+                    TimeStamp = DateTime.FromFileTimeUtc((long)timestamp);
+                }
+                else
+                    TimeStamp = DateTime.MinValue;
+                #endregion
+
+                #region Set Source IP
+                    var keys = from KeyValuePair<uint, string> pair in FrameFields where (
+                                   (pair.Value.ToLower().Contains("sourceaddress")) &&
+                                   (pair.Value.ToLower().Contains("ip"))
+                                   ) select pair.Key;
+                    if (keys.Count() != 0)
+                        //SourceIP = GetFieldValueByIndex(hParsedFrame, keys.ElementAt(0));
+                        SourceIP = GetFieldValueByFieldName(hParsedFrame, FrameFields[keys.ElementAt(0)]);
+                    else
+                        SourceIP = string.Empty;
+                #endregion
+
+                #region Set Source Port
+                     FieldValue = GetFieldValueByFieldName(hParsedFrame, GetFieldName("Tcp.SrcPort"));                    if (FieldValue.Contains("("))
+                     {
+                         SourcePort = Convert.ToUInt32(FieldValue.Substring(FieldValue.IndexOf('(') + 1, FieldValue.IndexOf(')') - FieldValue.IndexOf('(') - 1));
+
+                     }
+                     else
+                         SourcePort = Convert.ToUInt32(FieldValue);
+                #endregion
+
+                #region Set Destination IP
+                     var keys1 = from KeyValuePair<uint, string> pair in FrameFields
+                                where (
+                                    (pair.Value.ToLower().Contains("destinationaddress")) &&
+                                    (pair.Value.ToLower().Contains("ip"))
+                                    )
+                                select pair.Key;
+                    if (keys1.Count() != 0)
+                        //DestinationIP = GetFieldValueByIndex(hParsedFrame, keys.ElementAt(0));
+                        DestinationIP = GetFieldValueByFieldName(hParsedFrame, FrameFields[keys1.ElementAt(0)]);
+                    else
+                        DestinationIP = string.Empty;
+                #endregion
+
+                #region Set Destination Port
+                    FieldValue = GetFieldValueByFieldName(hParsedFrame, GetFieldName("Tcp.DstPort"));
+                    if (FieldValue.Contains("("))
+                    {
+                        DestinationPort = Convert.ToUInt32(FieldValue.Substring(FieldValue.IndexOf('(') + 1, FieldValue.IndexOf(')') - FieldValue.IndexOf('(') - 1));
+
+                    }
+                    else
+                        DestinationPort = Convert.ToUInt32(FieldValue);
+                #endregion
+
+            }
+            #endregion
+
+            #region Virtual Functions that should be implemented by the derived classes
+            public virtual void Display()
+            {
+                Console.WriteLine("Frame Number\t: {0}", Number);
+                Console.WriteLine("Time Stamp\t: {0}", TimeStamp);
+                Console.WriteLine("Src Address\t: {0}:{1}", SourceIP, SourcePort);
+                Console.WriteLine("Dest Address\t: {0}:{1}", DestinationIP, DestinationPort);
+            }
+            #endregion
+        }
+        public class HTTPRequestFrame : HTTPFrame
+        {
+            public string URL { get; set; }
+            public string QueryString { get; set; }
+            #region Constructor
+            public HTTPRequestFrame(IntPtr hParsedFrame, uint frameNumber)
+                : base(hParsedFrame, frameNumber)
+            {
+                #region Populate URL of the request
+                URL = GetFieldValueByFieldName(hParsedFrame, GetFieldName("Http.Request.URI.Uri.Location"));
+
+                #region Set Query String
+                    QueryString = "";
+                    var keys = from KeyValuePair<uint, string> pair in FrameFields where pair.Value.Contains("Http.Request.URI.Uri.Parameters") select pair.Key;
+                    if (keys.Count() > 0)
+                    {
+                        QueryString = "?";
+                        foreach (uint fid in keys)
+                        {
+                            
+                            if (FrameFields[fid].EndsWith("Http.Request.URI.Uri.Parameters")
+                                || (FrameFields[fid].EndsWith("Http.Request.URI.Uri.Parameters.Fields")))
+                                continue;
+                            else
+                            {
+
+                                QueryString += "&" + FrameFields[fid].Substring(FrameFields[fid].IndexOf("Fields.") + 7) + "=" + GetFieldValueByIndex(hParsedFrame, fid);
+                            }
+                        }
+                        QueryString.Replace("?&", "?");
+                    }
+                #endregion
+                
+                #endregion
+            }
+            #endregion
+
+            public override void Display()
+            {
+
+                base.Display();
+                Console.WriteLine("URL\t\t: {0}", URL);
+                Console.WriteLine("Query String\t: {0}", QueryString);
+
+            }
+        }
+        public class HTTPResponseFrame : HTTPFrame
+        {
+            public string URL { get; set; }
+            public string StatusCode { get; set; }
+            #region Constructor
+            public HTTPResponseFrame(IntPtr hParsedFrame, uint frameNumber)
+                : base(hParsedFrame, frameNumber)
+            {
+                URL = GetFieldValueByFieldName(hParsedFrame, GetFieldName("Tcp.TCPPayload.Http"));
+                StatusCode = GetFieldValueByFieldName(hParsedFrame, GetFieldName("Http.Response.StatusCode"));               
+            }
+            #endregion
+
+            public override void Display()
+            {
+
+                base.Display();
+                Console.WriteLine("URL\t: {0}", URL);
+                Console.WriteLine("Status Code\t: {0}", StatusCode);
+
+            }
+        }
+
+        public class HTTPPayloadFrame : HTTPFrame
+        {
+            public string URL { get;set; }
+            public HTTPFrameType Type { get; set; }
+            public HTTPPayloadFrame(IntPtr hParsedFrame, uint frameNumber)
+                :base(hParsedFrame,frameNumber)
+            {
+                URL = GetFieldValueByFieldName(hParsedFrame, GetFieldName("Tcp.TCPPayload.Http"));
+                Type = HTTPFrameType.Invalid;
+            }
+
+            public override void Display()
+            {
+                base.Display();
+                Console.WriteLine("URL\t: {0}", URL);
+                Console.WriteLine("Type\t: {0}", Type.ToString());
+            }
+        }
+
+        /*-----------------------------------------------------------------------------------------------------*/
+
+
+        //Dictionary to hold the index location for fields in a frame
+        private static Dictionary<uint, string> FrameFields = new Dictionary<uint, string>();
+        private bool IPv4;
+        private IntPtr _hParsedFrame = IntPtr.Zero;
+        private bool IsRequest
+        {
+            get
+            {
+                if (_hParsedFrame == IntPtr.Zero)
+                {
+                    throw new System.InvalidOperationException("Cannot check the value of this property without initializing with _hParsedFrame");
+                }
+
+                if (!GetFieldName("Http.Request.Command").Equals(string.Empty))
+                    return true;
+                else
+                    return false;
+                
+                #region Earlier logic to determine if this is a request based on the DstPot. Now commented !!
+                //FieldValue = GetFieldValueByFieldName(_hParsedFrame, GetFieldName("Tcp.DstPort"));
+                //if (!FieldValue.Equals(string.Empty))
+                //{
+                //    if (FieldValue.Contains("("))
+                //    {
+                //        if (FieldValue.Contains("HTTP"))
+                //            return true;
+                //        else
+                //            return false;
+                //    }
+                //    else
+                //    {
+                //        //It is possible that the DstPort did not contain HTTP however it can still be a REQUEST packet if it is running on some non-default HTTP port
+                //        //Ceck for the presense of an HTTP VERB
+                //        return false;
+                //    }
+                //}
+                //else
+                //    return false;
+                #endregion
+            }
+        }
+        private bool IsResponse
+        {
+            get
+            {
+                if (_hParsedFrame == IntPtr.Zero)
+                {
+                    throw new System.InvalidOperationException("Cannot check the value of this property without initializing with _hParsedFrame");
+                }
+
+                if (!GetFieldName("Http.Response.StatusCode").Equals(string.Empty))
+                    return true;
+                else
+                    return false;
+                #region Earlier logic to determine if this is a request based on the DstPot. Now commented !!
+                //FieldValue = GetFieldValueByFieldName(_hParsedFrame, GetFieldName("Tcp.SrcPort"));
+                //if (!FieldValue.Equals(string.Empty))
+                //{
+                //    if (FieldValue.Contains("("))
+                //    {
+                //        if (FieldValue.Contains("HTTP"))
+                //            return true;
+                //        else
+                //            return false;
+                //    }
+                //    else
+                //        return false;
+                //}
+                //else
+                //    return false;
+                #endregion
+            }
+        }
+        private bool IsPayload
+        {
+            get
+            {
+                if (_hParsedFrame == IntPtr.Zero)
+                {
+                    throw new System.InvalidOperationException("Cannot check the value of this property without initializing with _hParsedFrame");
+                }
+                
+              /*  if (!IsRequest && !IsResponse &&
+                    (!GetFieldName("Http.payload").Equals(string.Empty) || !GetFieldName("Http.HttpIncompletePayload").Equals(string.Empty))
+                    )*/
+                if (!IsRequest && !IsResponse &&
+                    (!GetFieldName("Http._BuildHTTPConversation").Equals(string.Empty))
+                    )
+                {
+                    //This packet does not contain an HTTP VERB
+                    //This packet does not contain an HTTP ResponseCode
+                    //But, it contains an HTTPPayload element, so this has to be a payload packet !!
+                    return true;
+                }
+                else
+                    return false;
+            }
+        }
+
+        #region Constructor
+        public MyHttpParser(IntPtr hParsedFrame)
+        {
+            _hParsedFrame = hParsedFrame;
+            #region Initialize the dictionary(FrameFields) which will hold the field names and their index within the frame
+                uint ulFieldCount;
+                uint errno = NetmonAPI.NmGetFieldCount(_hParsedFrame, out ulFieldCount);
+                FrameFields.Clear();
+                for (uint fid = 0; fid < ulFieldCount; fid++)
+                {
+                    #region Get Field Name and add it to the Dictionary alond with its index(i.e.. fid)
+                        string FieldName = GetFieldName(hParsedFrame, fid);
+                        if (!FieldName.Equals(string.Empty))
+                            FrameFields.Add(fid, FieldName);
+                    #endregion
+                }
+            #endregion
+            
+            #region Check if this is an IPv4 OR an IPv6 frame
+                var Keys = from KeyValuePair<uint, string> pair in FrameFields where pair.Value.Contains("Ipv6") select pair.Key;
+                if (Keys.Count() > 0)
+                    IPv4 = false;
+                else
+                    IPv4 = true;               
+            #endregion
+        }
+        #endregion
+
+        private static void ParserCallback(IntPtr pCallerContext, uint ulStatusCode, string lpDescription, NmCallbackMsgType ulType)
+        {
+            if (ulType == NmCallbackMsgType.Error)
+            {
+                Console.WriteLine("ERROR: " + lpDescription);
+            }
+            else
+            {
+                Console.WriteLine(lpDescription);
+            }
+        }
+
+        /*Print Field Value within a Frame*/
+        #region Display_FieldValue
+        private static string PrintParsedFrameFieldValue(IntPtr hParsedFrame, uint fieldId)
+        {
+
+            StringBuilder sb = new StringBuilder();
+            NmParsedFieldInfo parsedField = new NmParsedFieldInfo();
+            parsedField.Size = (ushort)System.Runtime.InteropServices.Marshal.SizeOf(parsedField);
+
+            uint errno = NetmonAPI.NmGetParsedFieldInfo(hParsedFrame, fieldId, parsedField.Size, ref parsedField);
+            if (errno == ERROR_SUCCESS)
+            {
+                if (parsedField.NplDataTypeNameLength != 0)
+                {
+                    char[] name = new char[BUFFER_SIZE];
+                    unsafe
+                    {
+                        fixed (char* pstr = name)
+                        {
+                            errno = NetmonAPI.NmGetFieldName(hParsedFrame, fieldId, NmParsedFieldNames.DataTypeName, BUFFER_SIZE, pstr);
+                        }
+                    }
+                    sb.Append((new string(name).Replace("\0", string.Empty)).Replace("AsciiStringTerm", ""));
+                    
+                    //Console.Write("(" + new string(name).Replace("\0", string.Empty) + ") ");
+                }
+
+                if (parsedField.FieldBitLength > 0)
+                {
+                    byte number8Bit = 0;
+                    ushort number16Bit = 0;
+                    uint number32Bit = 0;
+                    ulong number64Bit = 0;
+                    ulong rl = parsedField.ValueBufferLength;
+
+                    switch (parsedField.ValueType)
+                    {
+                        case FieldType.VT_UI1:
+                            errno = NetmonAPI.NmGetFieldValueNumber8Bit(hParsedFrame, fieldId, out number8Bit);
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(number8Bit.ToString());
+                                //Console.WriteLine(number8Bit);
+                            }
+                            else
+                            {
+                                sb.Append("ERROR:" + errno.ToString());
+                                //Console.WriteLine("Error " + errno);
+                            }
+
+                            break;
+                        case FieldType.VT_I1:
+                            errno = NetmonAPI.NmGetFieldValueNumber8Bit(hParsedFrame, fieldId, out number8Bit);
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(((sbyte)number8Bit).ToString());
+                                //Console.WriteLine((sbyte)number8Bit);
+                            }
+                            else
+                            {
+                                sb.Append("ERROR:" + errno.ToString());
+                                //Console.WriteLine("Error " + errno);
+                            }
+
+                            break;
+                        case FieldType.VT_UI2:
+                            errno = NetmonAPI.NmGetFieldValueNumber16Bit(hParsedFrame, fieldId, out number16Bit);
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(number16Bit.ToString());
+                                //Console.WriteLine(number16Bit);
+                            }
+                            else
+                            {
+                                sb.Append("ERROR:" + errno.ToString());
+                                //Console.WriteLine("Error " + errno);
+                            }
+
+                            break;
+                        case FieldType.VT_I2:
+                            errno = NetmonAPI.NmGetFieldValueNumber16Bit(hParsedFrame, fieldId, out number16Bit);
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(((short)number16Bit).ToString());
+                                //Console.WriteLine((short)number16Bit);
+                            }
+                            else
+                            {
+                                sb.Append("ERROR:" + errno.ToString());
+                                //Console.WriteLine("Error " + errno);
+                            }
+
+                            break;
+                        case FieldType.VT_UI4:
+                            errno = NetmonAPI.NmGetFieldValueNumber32Bit(hParsedFrame, fieldId, out number32Bit);
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(number32Bit.ToString());
+                                //Console.WriteLine(number32Bit);
+                            }
+                            else
+                            {
+                                sb.Append("ERROR:" + errno.ToString());
+                                //Console.WriteLine("Error " + errno);
+                            }
+
+                            break;
+                        case FieldType.VT_I4:
+                            errno = NetmonAPI.NmGetFieldValueNumber32Bit(hParsedFrame, fieldId, out number32Bit);
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(((int)number32Bit).ToString());
+                                //Console.WriteLine((int)number32Bit);
+                            }
+                            else
+                            {
+                                sb.Append("ERROR:" + errno.ToString());
+                                //Console.WriteLine("Error " + errno);
+                            }
+
+                            break;
+                        case FieldType.VT_UI8:
+                            errno = NetmonAPI.NmGetFieldValueNumber64Bit(hParsedFrame, fieldId, out number64Bit);
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(number64Bit.ToString());
+                                //Console.WriteLine(number64Bit);
+                            }
+                            else
+                            {
+                                sb.Append("ERROR:" + errno.ToString());
+                                //Console.WriteLine("Error " + errno);
+                            }
+
+                            break;
+                        case FieldType.VT_I8:
+                            errno = NetmonAPI.NmGetFieldValueNumber64Bit(hParsedFrame, fieldId, out number64Bit);
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(((long)number64Bit));
+                                //Console.WriteLine((long)number64Bit);
+                            }
+                            else
+                            {
+                                sb.Append("ERROR:" + errno.ToString());
+                                //Console.WriteLine("Error " + errno);
+                            }
+
+                            break;
+                        case FieldType.VT_ARRAY | FieldType.VT_UI1:
+                            byte[] byteArray = new byte[BUFFER_SIZE];
+                            unsafe
+                            {
+                                fixed (byte* barr = byteArray)
+                                {
+                                    errno = NetmonAPI.NmGetFieldValueByteArray(hParsedFrame, fieldId, BUFFER_SIZE, barr, out number32Bit);
+                                }
+                            }
+
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                for (uint i = 0; i < number32Bit; i++)
+                                {
+                                    sb.Append(byteArray[i].ToString("X2") + " ");
+                                    //Console.Write(byteArray[i].ToString("X2") + " ");
+                                }
+
+                                if ((parsedField.FieldBitLength >> 3) > number32Bit)
+                                {
+                                    sb.Append(" ... " + ((parsedField.FieldBitLength >> 3) - number32Bit) + " more bytes not displayed");
+                                    //Console.Write(" ... " + ((parsedField.FieldBitLength >> 3) - number32Bit) + " more bytes not displayed");
+                                }
+
+                                //Console.WriteLine();
+                            }
+                            else if (errno == ERROR_RESOURCE_NOT_AVAILABLE)
+                            {
+                                sb.Append("");
+                                //Console.WriteLine("The field is a container");
+                            }
+
+                            break;
+                        case FieldType.VT_LPWSTR:
+                            char[] name = new char[2048];
+                            unsafe
+                            {
+                                fixed (char* pstr = name)
+                                {
+                                    errno = NetmonAPI.NmGetFieldValueString(hParsedFrame, fieldId, 2048, pstr);
+                                }
+                            }
+
+                            if (errno == ERROR_SUCCESS)
+                            {
+                                sb.Append(new string(name).Replace("\0", string.Empty));
+                                //Console.WriteLine(new string(name).Replace("\0", string.Empty));
+                            }
+                            else
+                            {
+                                sb.Append("String is too long to display");
+                                //Console.WriteLine("String is too long to display");
+                            }
+
+                            break;
+                        case FieldType.VT_LPSTR:
+                            sb.Append("Should not occur");
+                            //Console.WriteLine("Should not occur");
+                            break;
+                        case FieldType.VT_EMPTY:
+                            sb.Append("Struct or Array types expect description");
+                            //Console.WriteLine("Struct or Array types expect description");
+                            break;
+                        default:
+                            sb.Append("Unknown Type " + parsedField.ValueType);
+                            //Console.WriteLine("Unknown Type " + parsedField.ValueType);
+                            break;
+                    }
+                }
+                else
+                {
+                    sb.Append("");
+                    //Console.WriteLine("Empty");
+                }
+            }
+            else
+            {
+                sb.Append("Could Not Retrieve Parsed Field Info " + errno);
+            }
+            return sb.ToString();
+        }
+        #endregion
+
+
+        private HTTPFrame GetHTTPFrame(IntPtr hParsedFrame, uint frameNumber)
+        {
+            //Still need to check for HTTP Request Payload and HTTP Response Payload frames            
+            if (this.IsRequest)
+                return new HTTPRequestFrame(hParsedFrame, frameNumber + 1);
+            else
+                if (this.IsResponse)
+                    return new HTTPResponseFrame(hParsedFrame, frameNumber + 1);
+                else
+                    if (this.IsPayload)
+                        return new HTTPPayloadFrame(hParsedFrame, frameNumber + 1);
+                    else
+                        throw new InvalidOperationException("Type of HTTP Frame could not be determined, this is neither a request, not a response frame");
+        }
+
+        public void DisplayFrameInformation(IntPtr hParsedFrame, uint frameNumber, CommandLineArguments command)
+        {
+            char keyOption = 'n';
+            if (frameNumber + 1 == 454)
+            {
+
+                Console.WriteLine("Print Frame Info? (y/n) ");
+                keyOption = 'y';
+                //keyOption = Console.ReadKey().KeyChar;
+                //Console.WriteLine();
+            }
+
+            if (keyOption == 'y' || keyOption == 'Y')
+            {
+                HTTPFrame thisFrame = GetHTTPFrame(hParsedFrame,frameNumber);
+                Console.WriteLine("-------------------------------------------");
+                thisFrame.Display();
+                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine();
+
+                #region Parse through all the fields in the frame
+                //for (uint fid = 0; fid < ulFieldCount; fid++)
+                //{
+                // 
+                //        //Console.WriteLine("IPv6" + FieldName + ":" + FieldValue);
+                //    }
+                //    else if (errno == ERROR_NOT_FOUND)
+                //    {
+                //        //Console.ForegroundColor = ConsoleColor.Red;
+                //        //Console.WriteLine("{0}:",FieldName);
+                //        //Console.ResetColor();
+                //        ////PrintParsedFrameFieldValue(hParsedFrame, fid);
+                //    }
+                //    else
+                //    {
+                //        //Console.ForegroundColor = ConsoleColor.Red;
+                //        //Console.WriteLine("Error: "+ errno);
+                //        ////Console.WriteLine("Error Retrieving Value, NmGetFieldName Returned: " + errno);
+                //        //Console.ResetColor();
+                //        continue;
+                //    }
+                //}
+                #endregion
+
+               
+            }
+        }
+
+        public HTTPFrame GetFrame(IntPtr hParsedFrame, uint frameNumber)
+        {            
+          return GetHTTPFrame(hParsedFrame,frameNumber);
+        }
+
+        private static string GetFieldName(IntPtr hParsedFrame, uint fid)
+        {
+            char[] name = new char[BUFFER_SIZE * 2];
+            uint errno;
+            unsafe
+            {
+                fixed (char* pstr = name)
+                {
+                    errno = NetmonAPI.NmGetFieldName(hParsedFrame, fid, NmParsedFieldNames.NamePath, BUFFER_SIZE * 2, pstr);
+                }
+            }
+
+            if (errno == ERROR_SUCCESS)
+            {
+                return new string(name).Replace("\0", string.Empty);
+            }
+            else
+            {
+                if (errno == ERROR_NOT_FOUND)
+                    return PrintParsedFrameFieldValue(hParsedFrame, fid);
+                else
+                    return string.Empty;
+            }
+        }
+
+        /// <summary>
+        /// Returns the FieldName that matches the string pased.
+        /// If there are multiple matches, will always return only the first match
+        /// </summary>
+        /// <param name="approximateMatch"></param>
+        /// <returns></returns>
+        private static string GetFieldName(string approximateMatch)
+        {
+            var keys = from KeyValuePair<uint, string> pair in FrameFields where pair.Value.ToLower().Contains(approximateMatch.ToLower()) select pair.Key;
+            if (keys.Count() != 0)
+                return FrameFields[keys.ElementAt(0)];
+            else
+                return string.Empty;
+        }
+
+        private static string GetFieldValueByIndex(IntPtr hParsedFrame, uint index)
+        {
+            uint errno;
+            char[] name = new char[BUFFER_SIZE];
+            unsafe
+            {
+                fixed (char* pstr = name)
+                {
+                    errno = NetmonAPI.NmGetFieldName(hParsedFrame, index, NmParsedFieldNames.FieldDisplayString, BUFFER_SIZE, pstr);
+                }
+            }
+            if (errno == ERROR_SUCCESS)
+            {
+                return new string(name).Replace("\0", string.Empty);
+            }
+            else
+            {
+                if (errno == ERROR_NOT_FOUND)
+                    return PrintParsedFrameFieldValue(hParsedFrame,index);
+                else
+                    return string.Empty;
+            }
+
+        }
+
+        private static string GetFieldValueByFieldName(IntPtr hParsedFrame, string FieldName)
+        {
+            var Keys = from KeyValuePair<uint, string> pair in FrameFields where FieldName.Equals(pair.Value) select pair.Key;
+            if (Keys.Count() == 0)
+                return string.Empty;
+            else
+            {
+                if (Keys.Count() == 1)
+                {
+                    #region GetFieldValue at a specific index within the frame
+                    return GetFieldValueByIndex(hParsedFrame, Keys.ElementAt(0));
+                    #endregion
+                }
+                else
+                {
+                    #region GetFieldValue at all index'es within the frame and then return a consolidated string object
+                        StringBuilder sb = new StringBuilder();
+                        foreach (uint i in Keys)
+                        {
+                            sb.Append(GetFieldValueByIndex(hParsedFrame, i));
+                        }
+                        return sb.ToString();
+                    #endregion
+                }
+            }
+        }
+
+        private void PlaceHolder()
+        {
+            ;
+        }
+    }
+}

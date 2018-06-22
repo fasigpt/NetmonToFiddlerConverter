@@ -1,0 +1,14 @@
+\\fasi-win8\C$\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\Expert.ico
+\\fasi-win8\C$\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\My Expert Help File.rtf
+\\fasi-win8\C$\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\Netmon2Fiddler.exe.config
+\\fasi-win8\C$\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\Netmon2Fiddler.exe
+\\fasi-win8\C$\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\Netmon2Fiddler.pdb
+\\fasi-win8\C$\project\n2f\v3\n2f\n2f\ExpertExample\obj\Debug\Netmon2Fiddler.exe
+\\fasi-win8\C$\project\n2f\v3\n2f\n2f\ExpertExample\obj\Debug\Netmon2Fiddler.pdb
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\Expert.ico
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\My Expert Help File.rtf
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\Netmon2Fiddler.exe.config
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\Netmon2Fiddler.exe
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Debug\Netmon2Fiddler.pdb
+C:\project\n2f\v3\n2f\n2f\ExpertExample\obj\Debug\Netmon2Fiddler.exe
+C:\project\n2f\v3\n2f\n2f\ExpertExample\obj\Debug\Netmon2Fiddler.pdb

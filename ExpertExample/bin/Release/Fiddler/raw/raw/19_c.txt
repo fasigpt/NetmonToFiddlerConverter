@@ -1,0 +1,6 @@
+HEAD /w81/2/redir/v2-storeredir.cab?1310051247 HTTP/1.1
+Connection: Keep-Alive
+Accept: */*
+User-Agent: Windows-Update-Agent
+Host: fe2.ws.microsoft.com
+

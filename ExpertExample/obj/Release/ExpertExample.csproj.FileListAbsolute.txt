@@ -1,0 +1,15 @@
+D:\MyData\Projects\NetmonExpertSDK\ExpertExample\bin\Release\Expert.ico
+D:\MyData\Projects\NetmonExpertSDK\ExpertExample\bin\Release\My Expert Help File.rtf
+D:\MyData\Projects\NetmonExpertSDK\ExpertExample\bin\Release\ExpertExample.exe.config
+D:\MyData\Projects\NetmonExpertSDK\ExpertExample\bin\Release\ExpertExample.exe
+D:\MyData\Projects\NetmonExpertSDK\ExpertExample\bin\Release\ExpertExample.pdb
+D:\MyData\Projects\NetmonExpertSDK\ExpertExample\obj\Release\ResolveAssemblyReference.cache
+D:\MyData\Projects\NetmonExpertSDK\ExpertExample\obj\Release\ExpertExample.exe
+D:\MyData\Projects\NetmonExpertSDK\ExpertExample\obj\Release\ExpertExample.pdb
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\ExpertExample.exe.config
+C:\project\n2f\v3\n2f\n2f\ExpertExample\obj\Release\ExpertExample.exe
+C:\project\n2f\v3\n2f\n2f\ExpertExample\obj\Release\ExpertExample.pdb
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\Expert.ico
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\My Expert Help File.rtf
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\ExpertExample.exe
+C:\project\n2f\v3\n2f\n2f\ExpertExample\bin\Release\ExpertExample.pdb

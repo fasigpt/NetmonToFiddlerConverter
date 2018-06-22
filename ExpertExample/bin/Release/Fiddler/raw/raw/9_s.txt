@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Server: Apache
+EMEA-Info: wci048 0.035
+Content-Type: text/xml
+X-Varnish: 2126079167 2126078021
+X-Varnish-Cache: HIT
+X-Varnish-Hits: 8
+X-Varnish: 1073029237
+Vary: Accept-Encoding
+Cache-Control: public, max-age=60
+Date: Sat, 05 Oct 2013 12:47:12 GMT
+Content-Length: 582
+Connection: keep-alive
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tile><visual><binding branding="name" template="TileWideSmallImageAndText03"><image alt="T&amp;T look to gatecrash IPL party" id="1" src="http://static.cricinfo.com/db/PICTURES/CMS/168200/168213.1.jpg" /><text id="1">T&amp;T look to gatecrash IPL party</text></binding><binding branding="name" template="TileSquarePeekImageAndText04"><image alt="T&amp;T look to gatecrash IPL party" id="1" src="http://static.cricinfo.com/db/PICTURES/CMS/168200/168213.1.jpg" /><text id="1">T&amp;T look to gatecrash IPL party</text></binding></visual></tile>

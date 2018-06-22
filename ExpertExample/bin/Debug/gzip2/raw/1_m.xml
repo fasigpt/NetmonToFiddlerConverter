@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1" BitFlags="100">
+  <SessionTimers ClientConnected="2013-10-04T21:07:25.1435336+05:30" ClientBeginRequest="2013-10-04T21:07:25.1435336+05:30" GotRequestHeaders="2013-10-04T21:07:25.1435336+05:30" ClientDoneRequest="2013-10-04T21:07:25.1435336+05:30" GatewayTime="0" DNSTime="0" TCPConnectTime="0" HTTPSHandshakeTime="0" ServerConnected="0001-01-01T00:00:00" FiddlerBeginRequest="0001-01-01T00:00:00" ServerGotRequest="0001-01-01T00:00:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2013-10-04T21:07:25.1591601+05:30" ClientDoneResponse="2013-10-04T21:07:25.1591601+05:30" />
+  <PipeInfo />
+  <SessionFlags>
+    <SessionFlag N="x-clientport" V="37461" />
+    <SessionFlag N="x-responsebodytransferlength" V="512" />
+    <SessionFlag N="x-fiddler-generated" V="utilCreateResponseAndBypassServer" />
+    <SessionFlag N="x-processinfo" V="fiddler:1740" />
+    <SessionFlag N="x-clientip" V="127.0.0.1" />
+    <SessionFlag N="ui-backcolor" V="Lavender" />
+  </SessionFlags>
+</Session>
